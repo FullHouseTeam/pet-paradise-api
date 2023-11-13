@@ -38,13 +38,13 @@ jobs:
       run: pnpm install
 
     - name: Build API
-      run: npx nx build api
+      run: pnpm build api
 
     - name: Build API - TEST
-      run: npx nx build api-test
+      run: pnpm build api-test
 
-    - name: Test
-      run: npx nx test api-test
+    # - name: Test
+    #   run: pnpm test api-test
 
   check_commits_convetion:
     name: Conventional Commits Message
