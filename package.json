@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx build --configuration=production",
+    "test": "nx test api-test",
     "prepare": "nx g @nx-dotnet/core:restore"
   },
   "private": true,
