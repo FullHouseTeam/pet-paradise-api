@@ -7,6 +7,7 @@ tmp
 
 # dependencies
 node_modules
+generated
 
 # IDEs and editors
 /.idea
@@ -39,3 +40,6 @@ testem.log
 Thumbs.db
 
 .nx/cache
+
+Directory.Build.props
+Directory.Build.targets
