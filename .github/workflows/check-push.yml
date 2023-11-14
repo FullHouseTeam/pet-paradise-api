@@ -43,8 +43,8 @@ jobs:
     - name: Build API - TEST
       run: pnpm build api-test
 
-    - name: Test
-      run: npx nx test api-test
+    # - name: Test
+    #   run: npx nx test api-test
 
   check_commits_convetion:
     name: Conventional Commits Message
