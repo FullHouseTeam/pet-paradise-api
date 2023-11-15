@@ -9,10 +9,10 @@ namespace api.Utilities
             return new NotFoundObjectResult(new { message = $"The product with ID = {id} doesn't exist." });
         }
 
-        public static string MaxLengthErrorMessage(int quantity) => $"El texto debe ser menor a ({quantity}) caracteres.";
+        public static string MaxLengthErrorMessage(int quantity) => $"The text must be less than ({quantity}) characters.";
 
-        public static string RangeValueErrorMessageInt(int range1, int range2) => $"El numero debe ser mayor o igual a ({range1}) y menor a ({range2}).";
+        public static string RangeValueErrorMessageInt(int range1, int range2) => $"The number must be greater than or equal to ({range1}) and less than ({range2}).";
 
-        public static string RangeValueErrorMessageDecimal(double range1, double range2) => $"El número debe ser mayor o igual a ({range1}) y menor a ({range2}).";
+        public static string RangeValueErrorMessageDecimal(double range1, double range2) => $"The number must be greater than or equal to ({range1}) and less than ({range2}).";
   }
 }

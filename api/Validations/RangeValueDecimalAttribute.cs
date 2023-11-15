@@ -26,7 +26,7 @@ public class RangeValueDecimalAttribute : ValidationAttribute
             }
             else
             {
-                return new ValidationResult("El valor no es un número válido.");
+                return new ValidationResult("The value is not a valid number.");
             }
         }
         return ValidationResult.Success!;

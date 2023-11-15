@@ -11,15 +11,15 @@ namespace api.Models
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
-        [DecimalValue(ErrorMessage = "La propiedad 'Price' debe ser un número decimal.")]
+        [DecimalValue(ErrorMessage = "The 'Price' property must be a decimal number.")]
         [RangeValueDecimal(1, 500000)]
         public decimal Price { get; set; }
 
-        [IntValue(ErrorMessage = "La propiedad 'Quantity' debe ser un número entero.")]
+        [IntValue(ErrorMessage = "The 'Quantity' property must be an integer.")]
         [RangeValueInt(1, 250000)]
         public int Quantity { get; set; }
 
-        [IntValue(ErrorMessage = "La propiedad 'Discount' debe ser un número entero.")]
+        [IntValue(ErrorMessage = "The 'Discount' property must be an integer.")]
         [RangeValueInt(1, 60)]
         public int Discount { get; set; }
 
@@ -35,13 +35,13 @@ namespace api.Models
         [MaxLengthCharacters(40)]
         public string ProductType { get; set; }= string.Empty;
 
-        [IntValue(ErrorMessage = "La propiedad 'BrandID' debe ser un número entero.")]
+        [IntValue(ErrorMessage = "The 'Discount' property must be an integer.")]
         public int BrandID { get; set; }
 
-        [IntValue(ErrorMessage = "La propiedad 'ProviderID' debe ser un número entero.")]
+        [IntValue(ErrorMessage = "The 'ProviderID' property must be an integer.")]
         public int ProviderID { get; set; }
 
-        [IntValue(ErrorMessage = "La propiedad 'HasTax' debe ser un número entero.")]
+        [IntValue(ErrorMessage = "The 'HasTax' property must be an integer.")]
         [RangeValueInt(1, 60)]
         public int HasTax { get; set; }
     }

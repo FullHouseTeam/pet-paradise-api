@@ -12,7 +12,7 @@ public class IntValueAttribute : ValidationAttribute
             }
             else
             {
-                return new ValidationResult(ErrorMessage ?? "El valor debe ser un número entero.");
+                return new ValidationResult(ErrorMessage ?? "The value must be an integer.");
             }
         }
 
