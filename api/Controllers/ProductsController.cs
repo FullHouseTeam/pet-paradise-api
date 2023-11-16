@@ -39,7 +39,7 @@ namespace api.Controllers
     public async Task<IActionResult> Create(Product product)
     {
         var newProduct = await _service.Create(product);
-        
+
         return CreatedAtAction(nameof(GetById), new { id = newProduct.ProductID }, product);
     }
 
