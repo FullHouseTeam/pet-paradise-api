@@ -28,7 +28,12 @@ namespace api.Controllers
     {
         var product = await _service.GetByID(id);
 
-        if (product == null)
+        if ( id <= 0 )
+        {
+          return ErrorUtilities.IdPositive(id);
+        }
+
+        if ( product == null )
         {
             return ErrorUtilities.ProductNotFound(id);
         }
@@ -46,6 +51,11 @@ namespace api.Controllers
     [HttpPut("{id}", Name = "EditProduct")]
     public async Task<IActionResult> Update(int id, Product product)
     {
+      if ( id <= 0 )
+      {
+          return ErrorUtilities.IdPositive(id);
+      }
+      
       if (id != product.ProductID)
       {
         return BadRequest(new { message = $"The ID({id}) URL doesn't match ID({product.ProductID}) of the request body."});
@@ -67,6 +77,11 @@ namespace api.Controllers
     [HttpDelete("{id}", Name = "DeleteProduct")]
      public async Task<IActionResult> Delete(int id)
     {
+      if ( id <= 0 )
+      {
+          return ErrorUtilities.IdPositive(id);
+      }
+
       var productToDelete = await _service.GetByID(id);
 
       if (productToDelete is not null)

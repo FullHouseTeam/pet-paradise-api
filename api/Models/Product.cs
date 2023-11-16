@@ -5,14 +5,16 @@ namespace api.Models
 {
     public class Product
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         public int ProductID { get; set; }
 
+        [StringValue]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
+        [DecimalPrecision(2, ErrorMessage = "The 'Price' property must have up to 2 decimal places.")]
         [DecimalValue(ErrorMessage = "The 'Price' property must be a decimal number.")]
-        [RangeValueDecimal(1, 500000)]
+        [RangeValueDecimal(0.0001, 500000)]
         public decimal Price { get; set; }
 
         [IntValue(ErrorMessage = "The 'Quantity' property must be an integer.")]
@@ -23,15 +25,19 @@ namespace api.Models
         [RangeValueInt(1, 60)]
         public int Discount { get; set; }
 
+        [StringValue]
         [MaxLengthCharacters(40)]
         public string AnimalCategory { get; set; }= string.Empty;
 
+        [StringValue]
         [MaxLengthCharacters(300)]
         public string Image { get; set; }= string.Empty;
 
+        [StringValue]
         [MaxLengthCharacters(1000)]
         public string Description { get; set; }= string.Empty;
 
+        [StringValue]
         [MaxLengthCharacters(40)]
         public string ProductType { get; set; }= string.Empty;
 
