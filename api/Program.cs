@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DataContext>(
 
 //Service Layer
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<ProviderService>();
 
 var app = builder.Build();
 
