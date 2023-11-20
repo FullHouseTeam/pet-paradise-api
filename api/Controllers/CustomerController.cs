@@ -44,7 +44,7 @@ namespace api.Controllers
     {
         var newCustomer = await _service.Create(customer);
 
-        return CreatedAtAction(nameof(GetById), new { id = newCustomer.UserID }, customer);
+        return CreatedAtAction(nameof(GetById), new { id = newCustomer.CustomerID }, customer);
     }
 
     [HttpPut("{id}", Name = "EditCustomer")]
@@ -55,9 +55,9 @@ namespace api.Controllers
           return ErrorUtilities.IdPositive(id);
       }
 
-      if (id != customer.UserID)
+      if (id != customer.CustomerID)
       {
-        return BadRequest(new { message = $"The ID({id}) URL doesn't match ID({customer.UserID}) of the request body."});
+        return BadRequest(new { message = $"The ID({id}) URL doesn't match ID({customer.CustomerID}) of the request body."});
       }
 
       var customerToUpdate = await _service.GetByID(id);

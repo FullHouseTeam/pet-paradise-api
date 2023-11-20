@@ -9,7 +9,7 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231120224943_firstmigration")]
+    [Migration("20231120230723_firstmigration")]
     partial class Firstmigration
     {
         /// <inheritdoc />
@@ -41,6 +41,37 @@ namespace api.Migrations
                     b.HasKey("BrandID");
 
                     b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("api.Models.Customer", b =>
+                {
+                    b.Property<int>("CustomerID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CustomerID"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Nit")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("RegionID")
+                        .HasColumnType("integer");
+
+                    b.HasKey("CustomerID");
+
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("api.Models.Product", b =>

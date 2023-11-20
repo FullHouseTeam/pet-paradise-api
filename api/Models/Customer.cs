@@ -3,7 +3,7 @@ namespace api.Models
     public class Customer
     {
         //[JsonIgnore]
-        public int UserID { get; set; }
+        public int CustomerID { get; set; }
 
         [StringValue]
         [MaxLengthCharacters(40)]
