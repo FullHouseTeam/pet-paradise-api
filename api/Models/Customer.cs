@@ -17,10 +17,8 @@ namespace api.Models
         [MaxLengthCharacters(40)]
         public string Password { get; set; }= string.Empty;
 
-        [IntValue(ErrorMessage = "The 'RegionID' property must be an integer.")]
         public int RegionID { get; set; }
 
-        [IntValue(ErrorMessage = "The 'Nit' property must be an integer.")]
         [RangeValueInt(100000000, 999999999)]
         public int Nit { get; set; }
     }

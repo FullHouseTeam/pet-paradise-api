@@ -8,7 +8,7 @@ namespace api.Utilities
         {
             return new NotFoundObjectResult(new { message = $"The product with ID = {id} doesn't exist." });
         }
-
+        
         public static NotFoundObjectResult BrandNotFound(int id)
         {
             return new NotFoundObjectResult(new { message = $"The brand with ID = {id} doesn't exist." });

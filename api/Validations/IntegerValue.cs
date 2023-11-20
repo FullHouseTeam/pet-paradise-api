@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-public class IntValue : ValidationAttribute
+
+public class IntegerValue : ValidationAttribute
 {
     protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
@@ -11,10 +12,9 @@ public class IntValue : ValidationAttribute
             }
             else
             {
-                return new ValidationResult(ErrorMessage ?? "The value must be an integer.");
+                return new ValidationResult(ErrorMessage ?? "The value must be a valid integer.");
             }
         }
-
         return ValidationResult.Success!;
     }
 }
