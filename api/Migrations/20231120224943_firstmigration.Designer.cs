@@ -9,8 +9,8 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231120085137_initmigration")]
-    partial class Initmigration
+    [Migration("20231120224943_firstmigration")]
+    partial class Firstmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,6 +92,27 @@ namespace api.Migrations
                     b.HasKey("ProductID");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("api.Models.Provider", b =>
+                {
+                    b.Property<int>("ProviderID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ProviderID"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nationality")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("ProviderID");
+
+                    b.ToTable("Providers");
                 });
 #pragma warning restore 612, 618
         }
