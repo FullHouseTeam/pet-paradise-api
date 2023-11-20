@@ -11,6 +11,7 @@ namespace api.Data
 
         }
         public DbSet<Product> Products => Set<Product>();
+        public DbSet<Brand> Brands => Set<Brand>();
         public DbSet<Provider> Providers => Set<Provider>();
     }
 }
