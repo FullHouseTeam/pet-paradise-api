@@ -8,6 +8,16 @@ namespace api.Utilities
         {
             return new NotFoundObjectResult(new { message = $"The product with ID = {id} doesn't exist." });
         }
+        
+        public static NotFoundObjectResult BrandNotFound(int id)
+        {
+            return new NotFoundObjectResult(new { message = $"The brand with ID = {id} doesn't exist." });
+        }
+
+        public static NotFoundObjectResult IdPositive(int id)
+        {
+            return new NotFoundObjectResult(new { message = $"ID = {id} must be a positive value greater than 0." });
+        }
 
         public static string MaxLengthErrorMessage(int quantity) => $"The text must be less than ({quantity}) characters.";
 
