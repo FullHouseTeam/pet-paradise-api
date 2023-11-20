@@ -1,4 +1,4 @@
-namespace PetParadiseApi.Api.Test;
+namespace api_test;
 
 public class UnitTest1
 {

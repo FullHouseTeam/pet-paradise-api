@@ -1,4 +1,4 @@
-namespace PetParadiseApi.Api;
+namespace api;
 
 public class WeatherForecast
 {
