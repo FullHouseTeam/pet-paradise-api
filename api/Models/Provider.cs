@@ -5,11 +5,9 @@ namespace api.Models
         //[JsonIgnore]
         public int ProviderID { get; set; }
 
-        [StringValue]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
-        [StringValue]
         [MaxLengthCharacters(40)]
         public string Nationality { get; set; }= string.Empty;
     }
