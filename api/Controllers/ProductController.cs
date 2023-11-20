@@ -1,49 +1,82 @@
-using Api.Data;
-using Api.Models;
+using api.Services;
+using api.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using api.Utilities;
 
-namespace Api.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class ProductController : ControllerBase
+namespace api.Controllers
 {
-  private readonly DataContext _dbContext;
-
-  public ProductController(DataContext dbContext)
-  {
-    _dbContext = dbContext;
-  }
-
-  // GET: api/Product
-  [HttpGet(Name = "GetAllProducts")]
-  public async Task<IEnumerable<Product>> GetProducts()
-  {
-    return await _dbContext.Products.ToListAsync();
-  }
-
-  // GET: api/Product/id
-  [HttpGet("{id}", Name = "GetProduct")]
-  public async Task<ActionResult<Product>> GetById(int id)
-  {
-    var product = await _dbContext.Products.FindAsync(id);
-
-    if (product == null)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProductsController : ControllerBase
     {
-      return NotFound();
+        private readonly ProductService _service;
+
+        public ProductsController(ProductService service)
+    {
+        _service = service;
     }
 
-    return product;
-  }
+    [HttpGet(Name = "GetProducts")]
+    public async Task<IEnumerable<Product>> Get()
+    {
+        return await _service.GetAll();
+    }
 
-  // POST api/product
-  [HttpPost]
-  public async Task<ActionResult<Product>> PostUser(Product product)
-  {
-    _dbContext.Products.Add(product);
-    await _dbContext.SaveChangesAsync();
+    [HttpGet("{id}", Name = "GetProduct")]
+    public async Task<ActionResult<Product>> GetById(int id)
+    {
+        var product = await _service.GetByID(id);
 
-    return CreatedAtAction(nameof(GetProducts), new { id = product.ProductId }, product);
-  }
+        if (product == null)
+        {
+            return ErrorUtilities.ProductNotFound(id);
+        }
+        return product;
+    }
+
+    [HttpPost(Name = "AddProduct")]
+    public async Task<IActionResult> Create(Product product)
+    {
+        var newProduct = await _service.Create(product);
+
+        return CreatedAtAction(nameof(GetById), new { id = newProduct.ProductID }, product);
+    }
+
+    [HttpPut("{id}", Name = "EditProduct")]
+    public async Task<IActionResult> Update(int id, Product product)
+    {
+      if (id != product.ProductID)
+      {
+        return BadRequest(new { message = $"The ID({id}) URL doesn't match ID({product.ProductID}) of the request body."});
+      }
+
+      var productToUpdate = await _service.GetByID(id);
+
+      if (productToUpdate is not null)
+      {
+        await _service.Update(id, product);
+        return NoContent();
+      }
+      else
+      {
+        return ErrorUtilities.ProductNotFound(id);
+      }
+    }
+
+    [HttpDelete("{id}", Name = "DeleteProduct")]
+     public async Task<IActionResult> Delete(int id)
+    {
+      var productToDelete = await _service.GetByID(id);
+
+      if (productToDelete is not null)
+      {
+        await _service.Delete(id);
+        return Ok();
+      }
+      else
+      {
+        return ErrorUtilities.ProductNotFound(id);
+      }
+    }
+    }
 }
