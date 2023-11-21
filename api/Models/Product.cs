@@ -68,7 +68,11 @@ namespace api.Models
         public int ProviderID { get; set; }
 
         [Required]
-        [DefaultValue("15")]
-        public bool HasTax { get; set; }
+        [DefaultValue("true")]
+        public bool IsAvailable { get; set; }
+
+        [Required]
+        [DefaultValue("false")]
+        public bool HasTax { get; set; }      
     }
 }
