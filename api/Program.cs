@@ -20,6 +20,7 @@ builder.Services.AddScoped<BrandService>();
 builder.Services.AddScoped<ProviderService>();
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<RegionService>();
+builder.Services.AddScoped<PurchaseService>();
 
 var app = builder.Build();
 
