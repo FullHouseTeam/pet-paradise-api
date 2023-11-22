@@ -1,6 +1,6 @@
 namespace api.DTOs
 {
-    public class RegioDTO
+    public class RegionDTO
     {
         public int RegionID { get; set; }
 

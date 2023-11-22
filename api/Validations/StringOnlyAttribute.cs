@@ -6,7 +6,6 @@ public class StringOnlyAttribute : ValidationAttribute, IModelValidator
 {
     public void AddValidation(ClientModelValidationContext context)
     {
-        // No es necesario para la validación del lado del cliente
     }
 
     public override bool IsValid(object? value)

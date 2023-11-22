@@ -12,7 +12,7 @@ public class DecimalValue : ValidationAttribute
             }
             else
             {
-                return new ValidationResult(ErrorMessage ?? "El valor debe ser un número decimal.");
+                return new ValidationResult(ErrorMessage ?? "The value must be a decimal number.");
             }
         }
 

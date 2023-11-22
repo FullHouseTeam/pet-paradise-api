@@ -6,12 +6,12 @@ public class StringValue : ValidationAttribute
     {
         if (value is null)
         {
-            return new ValidationResult("El campo no debe ser nulo.");
+            return new ValidationResult("The field must not be null");
         }
 
         if (value is not string)
         {
-            return new ValidationResult("El campo debe ser un string.");
+            return new ValidationResult("The field must be a string.");
         }
 
         return ValidationResult.Success;

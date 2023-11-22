@@ -16,11 +16,6 @@ public class DefaultValueAttribute : ValidationAttribute
             return ValidationResult.Success!;
         }
 
-        if (value.GetType() != _defaultValue.GetType())
-        {
-            return new ValidationResult("El valor predeterminado debe ser del mismo tipo que el valor.");
-        }
-
         return ValidationResult.Success!;
     }
 }
