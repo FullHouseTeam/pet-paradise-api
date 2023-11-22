@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -6,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace api.Migrations
 {
     /// <inheritdoc />
-    public partial class initmigration : Migration
+    public partial class Initmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,6 +59,7 @@ namespace api.Migrations
                     ProductType = table.Column<string>(type: "text", nullable: false),
                     BrandID = table.Column<int>(type: "integer", nullable: false),
                     ProviderID = table.Column<int>(type: "integer", nullable: false),
+                    IsAvailable = table.Column<bool>(type: "boolean", nullable: false),
                     HasTax = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
@@ -80,6 +82,25 @@ namespace api.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Purchases",
+                columns: table => new
+                {
+                    PurchaseID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    TotalPrice = table.Column<decimal>(type: "numeric", nullable: false),
+                    ReportDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ObtainedTaxes = table.Column<decimal>(type: "numeric", nullable: false),
+                    ApplicationTax = table.Column<decimal>(type: "numeric", nullable: false),
+                    DeliveryTime = table.Column<decimal>(type: "numeric", nullable: false),
+                    ProductID = table.Column<int>(type: "integer", nullable: false),
+                    UserID = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Purchases", x => x.PurchaseID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Regions",
                 columns: table => new
                 {
@@ -91,6 +112,21 @@ namespace api.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Regions", x => x.RegionID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Reviews",
+                columns: table => new
+                {
+                    ReviewID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    CustomerID = table.Column<int>(type: "integer", nullable: false),
+                    ProductID = table.Column<int>(type: "integer", nullable: false),
+                    ReviewMessage = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reviews", x => x.ReviewID);
                 });
         }
 
@@ -110,7 +146,13 @@ namespace api.Migrations
                 name: "Providers");
 
             migrationBuilder.DropTable(
+                name: "Purchases");
+
+            migrationBuilder.DropTable(
                 name: "Regions");
+
+            migrationBuilder.DropTable(
+                name: "Reviews");
         }
     }
 }

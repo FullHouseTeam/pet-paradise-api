@@ -16,5 +16,6 @@ namespace api.Data
         public DbSet<Customer> Customers => Set<Customer>();
         public DbSet<Region> Regions => Set<Region>();
         public DbSet<Purchase> Purchases => Set<Purchase>();
+        public DbSet<Review> Reviews => Set<Review>();
     }
 }

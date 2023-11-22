@@ -12,8 +12,8 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231121000249_secondmigration")]
-    partial class secondmigration
+    [Migration("20231122025109_initmigration")]
+    partial class Initmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -105,6 +105,9 @@ namespace api.Migrations
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -200,6 +203,29 @@ namespace api.Migrations
                     b.HasKey("RegionID");
 
                     b.ToTable("Regions");
+                });
+
+            modelBuilder.Entity("api.Models.Review", b =>
+                {
+                    b.Property<int>("ReviewID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ReviewID"));
+
+                    b.Property<int>("CustomerID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ReviewMessage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("ReviewID");
+
+                    b.ToTable("Reviews");
                 });
 #pragma warning restore 612, 618
         }

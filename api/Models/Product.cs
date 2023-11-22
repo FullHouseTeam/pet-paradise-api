@@ -1,19 +1,18 @@
 
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 namespace api.Models
 {
     public class Product
     {
-        //[JsonIgnore]
+        //[JsonIgnore]ç
+        [Required]
         [DefaultValue("1")]
+        [IntegerValue(ErrorMessage = "The 'ProductID' property must be an integer.")]
         public int ProductID { get; set; }
 
         [Required]
-        [StringOnly(ErrorMessage = "El campo 'name' debe ser una cadena (string).")]
         [DefaultValue("Dog Chow")]
-        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "El campo debe contener solo letras.")]
-        [DataType(DataType.Text, ErrorMessage = "El campo debe ser de tipo texto.")]
+        [StringValue]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
@@ -39,27 +38,31 @@ namespace api.Models
 
         [Required]
         [DefaultValue("Dog")]
+        [StringValue]
         [MaxLengthCharacters(40)]
         public string AnimalCategory { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("-- Link URL --")]
+        [StringValue]
         [MaxLengthCharacters(300)]
         public string Image { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("This is a very economical dog food.")]
+        [StringValue]
         [MaxLengthCharacters(1000)]
         public string Description { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("Food")]
+        [StringValue]
         [MaxLengthCharacters(40)]
         public string ProductType { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("1")]
-        [IntegerValue(ErrorMessage = "The 'Discount' property must be an integer.")]
+        [IntegerValue(ErrorMessage = "The 'BrandID' property must be an integer.")]
         public int BrandID { get; set; }
 
         [Required]
@@ -68,7 +71,11 @@ namespace api.Models
         public int ProviderID { get; set; }
 
         [Required]
-        [DefaultValue("15")]
-        public bool HasTax { get; set; }
+        [DefaultValue("true")]
+        public bool IsAvailable { get; set; }
+
+        [Required]
+        [DefaultValue("false")]
+        public bool HasTax { get; set; }      
     }
 }

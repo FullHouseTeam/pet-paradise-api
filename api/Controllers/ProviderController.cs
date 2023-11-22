@@ -1,6 +1,7 @@
 using api.Models;
 using api.Services;
 using api.Utilities;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -10,7 +11,7 @@ namespace api.Controllers
     public class ProviderController : ControllerBase
     {
         private readonly ProviderService _service;
-
+        
         public ProviderController(ProviderService service)
     {
         _service = service;

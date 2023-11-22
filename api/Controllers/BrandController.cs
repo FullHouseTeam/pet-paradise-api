@@ -20,7 +20,8 @@ namespace api.Controllers
     public async Task<IEnumerable<Brand>> Get()
     {
         return await _service.GetAll();
-    }
+    } 
+
 
     [HttpGet("{id}", Name = "GetBrand")]
     public async Task<ActionResult<Brand>> GetById(int id)
