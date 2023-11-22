@@ -22,6 +22,7 @@ builder.Services.AddScoped<ProviderService>();
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<RegionService>();
 builder.Services.AddScoped<PurchaseService>();
+builder.Services.AddScoped<ReviewService>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
