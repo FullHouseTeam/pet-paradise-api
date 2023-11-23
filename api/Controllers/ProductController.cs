@@ -16,13 +16,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetProducts")]
+    [HttpGet("list", Name = "GetProducts")]
     public async Task<IEnumerable<Product>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("{id}", Name = "GetProduct")]
+    [HttpGet("list/id", Name = "GetProduct")]
     public async Task<ActionResult<Product>> GetById(int id)
     {
         var product = await _service.GetByID(id);
@@ -34,7 +34,7 @@ namespace api.Controllers
         return product;
     }
 
-    [HttpPost(Name = "AddProduct")]
+    [HttpPost("save", Name = "AddProduct")]
     public async Task<IActionResult> Create(Product product)
     {
         var newProduct = await _service.Create(product);
@@ -42,7 +42,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProduct.ProductID }, product);
     }
 
-    [HttpPut("{id}", Name = "EditProduct")]
+    [HttpPut("edit", Name = "EditProduct")]
     public async Task<IActionResult> Update(int id, Product product)
     {
       if (id != product.ProductID)
@@ -62,21 +62,5 @@ namespace api.Controllers
         return ErrorUtilities.ProductNotFound(id);
       }
     }
-
-    [HttpDelete("{id}", Name = "DeleteProduct")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      var productToDelete = await _service.GetByID(id);
-
-      if (productToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
-      }
-      else
-      {
-        return ErrorUtilities.ProductNotFound(id);
-      }
-    }
-    }
+  }
 }

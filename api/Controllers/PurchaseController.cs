@@ -16,13 +16,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetPurchases")]
+    [HttpGet("list", Name = "GetPurchases")]
     public async Task<IEnumerable<Purchase>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("{id}", Name = "GetPurchase")]
+    [HttpGet("list/id", Name = "GetPurchase")]
     public async Task<ActionResult<Purchase>> GetById(int id)
     {
         var purchase = await _service.GetByID(id);
@@ -39,7 +39,7 @@ namespace api.Controllers
         return purchase;
     }
 
-    [HttpPost(Name = "AddPurchase")]
+    [HttpPost("save", Name = "AddPurchase")]
     public async Task<IActionResult> Create(Purchase purchase)
     {
         var newPurchase = await _service.Create(purchase);
@@ -47,7 +47,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newPurchase.PurchaseID }, purchase);
     }
 
-    [HttpPut("{id}", Name = "EditPurchase")]
+    [HttpPut("edit", Name = "EditPurchase")]
     public async Task<IActionResult> Update(int id, Purchase purchase)
     {
       if ( id <= 0 )
@@ -72,26 +72,5 @@ namespace api.Controllers
         return ErrorUtilities.BrandNotFound(id);
       }
     }
-
-    [HttpDelete("{id}", Name = "DeletePurchase")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      if ( id <= 0 )
-      {
-          return ErrorUtilities.IdPositive(id);
-      }
-
-      var purchaseToDelete = await _service.GetByID(id);
-
-      if (purchaseToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
-      }
-      else
-      {
-        return ErrorUtilities.BrandNotFound(id);
-      }
-    }
-    }
+  }
 }

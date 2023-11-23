@@ -16,14 +16,14 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetBrands")]
+    [HttpGet("list", Name = "GetBrands")]
     public async Task<IEnumerable<Brand>> Get()
     {
         return await _service.GetAll();
     } 
 
 
-    [HttpGet("{id}", Name = "GetBrand")]
+    [HttpGet("list/id", Name = "GetBrand")]
     public async Task<ActionResult<Brand>> GetById(int id)
     {
         var product = await _service.GetByID(id);
@@ -40,7 +40,7 @@ namespace api.Controllers
         return product;
     }
 
-    [HttpPost(Name = "AddBrand")]
+    [HttpPost("save", Name = "AddBrand")]
     public async Task<IActionResult> Create(Brand brand)
     {
         var newBrand = await _service.Create(brand);
@@ -48,7 +48,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newBrand.BrandID }, brand);
     }
 
-    [HttpPut("{id}", Name = "EditBrand")]
+    [HttpPut("edit", Name = "EditBrand")]
     public async Task<IActionResult> Update(int id, Brand brand)
     {
       if ( id <= 0 )
@@ -67,27 +67,6 @@ namespace api.Controllers
       {
         await _service.Update(id, brand);
         return NoContent();
-      }
-      else
-      {
-        return ErrorUtilities.BrandNotFound(id);
-      }
-    }
-
-    [HttpDelete("{id}", Name = "DeleteBrand")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      if ( id <= 0 )
-      {
-          return ErrorUtilities.IdPositive(id);
-      }
-
-      var brandToDelete = await _service.GetByID(id);
-
-      if (brandToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
       }
       else
       {

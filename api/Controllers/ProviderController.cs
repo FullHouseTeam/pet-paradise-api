@@ -17,13 +17,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetProviders")]
+    [HttpGet("list", Name = "GetProviders")]
     public async Task<IEnumerable<Provider>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("{id}", Name = "GetProvider")]
+    [HttpGet("list/id", Name = "GetProvider")]
     public async Task<ActionResult<Provider>> GetById(int id)
     {
         var product = await _service.GetByID(id);
@@ -40,7 +40,7 @@ namespace api.Controllers
         return product;
     }
 
-    [HttpPost(Name = "AddProvider")]
+    [HttpPost("save", Name = "AddProvider")]
     public async Task<IActionResult> Create(Provider provider)
     {
         var newProvider = await _service.Create(provider);
@@ -48,7 +48,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProvider.ProviderID }, provider);
     }
 
-    [HttpPut("{id}", Name = "EditProvider")]
+    [HttpPut("edit", Name = "EditProvider")]
     public async Task<IActionResult> Update(int id, Provider provider)
     {
       if ( id <= 0 )
@@ -73,26 +73,5 @@ namespace api.Controllers
         return ErrorUtilities.BrandNotFound(id);
       }
     }
-
-    [HttpDelete("{id}", Name = "DeleteProvider")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      if ( id <= 0 )
-      {
-          return ErrorUtilities.IdPositive(id);
-      }
-
-      var providerToDelete = await _service.GetByID(id);
-
-      if (providerToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
-      }
-      else
-      {
-        return ErrorUtilities.BrandNotFound(id);
-      }
-    }
-    }
+  }
 }

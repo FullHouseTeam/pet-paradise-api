@@ -16,13 +16,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetRegions")]
+    [HttpGet("list", Name = "GetRegions")]
     public async Task<IEnumerable<Region>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("{id}", Name = "GetRegion")]
+    [HttpGet("list/id", Name = "GetRegion")]
     public async Task<ActionResult<Region>> GetById(int id)
     {
         var product = await _service.GetByID(id);
@@ -39,7 +39,7 @@ namespace api.Controllers
         return product;
     }
 
-    [HttpPost(Name = "AddRegion")]
+    [HttpPost("save", Name = "AddRegion")]
     public async Task<IActionResult> Create(Region region)
     {
         var newRegion = await _service.Create(region);
@@ -47,7 +47,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newRegion.RegionID }, region);
     }
 
-    [HttpPut("{id}", Name = "EditRegion")]
+    [HttpPut("edit", Name = "EditRegion")]
     public async Task<IActionResult> Update(int id, Region region)
     {
       if ( id <= 0 )
@@ -71,27 +71,6 @@ namespace api.Controllers
       {
         return ErrorUtilities.BrandNotFound(id);
       }
-    }
-
-    [HttpDelete("{id}", Name = "DeleteRegion")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      if ( id <= 0 )
-      {
-          return ErrorUtilities.IdPositive(id);
-      }
-
-      var religionToDelete = await _service.GetByID(id);
-
-      if (religionToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
-      }
-      else
-      {
-        return ErrorUtilities.BrandNotFound(id);
-      }
-    }
-    }
+    } 
+  }
 }
