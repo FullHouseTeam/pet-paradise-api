@@ -16,13 +16,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetReviews")]
+    [HttpGet("list", Name = "GetReviews")]
     public async Task<IEnumerable<Review>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("{id}", Name = "GetReview")]
+    [HttpGet("list/id", Name = "GetReview")]
     public async Task<ActionResult<Review>> GetById(int id)
     {
         var review = await _service.GetByID(id);
@@ -39,7 +39,7 @@ namespace api.Controllers
         return review;
     }
 
-    [HttpPost(Name = "AddReview")]
+    [HttpPost("save", Name = "AddReview")]
     public async Task<IActionResult> Create(Review review)
     {
         var newReview = await _service.Create(review);
@@ -47,7 +47,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newReview.ReviewID }, review);
     }
 
-    [HttpPut("{id}", Name = "EditReview")]
+    [HttpPut("edit", Name = "EditReview")]
     public async Task<IActionResult> Update(int id, Review review)
     {
       if ( id <= 0 )
@@ -72,26 +72,5 @@ namespace api.Controllers
         return ErrorUtilities.BrandNotFound(id);
       }
     }
-
-    [HttpDelete("{id}", Name = "DeleteReview")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      if ( id <= 0 )
-      {
-          return ErrorUtilities.IdPositive(id);
-      }
-
-      var reviewToDelete = await _service.GetByID(id);
-
-      if (reviewToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
-      }
-      else
-      {
-        return ErrorUtilities.BrandNotFound(id);
-      }
-    }
-    }
+  }
 }

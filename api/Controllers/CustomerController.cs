@@ -16,13 +16,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet(Name = "GetCustomers")]
+    [HttpGet("list", Name = "GetCustomers")]
     public async Task<IEnumerable<Customer>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("{id}", Name = "GetCustomer")]
+    [HttpGet("list/id", Name = "GetCustomer")]
     public async Task<ActionResult<Customer>> GetById(int id)
     {
         var product = await _service.GetByID(id);
@@ -39,7 +39,7 @@ namespace api.Controllers
         return product;
     }
 
-    [HttpPost(Name = "AddCustomer")]
+    [HttpPost("save", Name = "AddCustomer")]
     public async Task<IActionResult> Create(Customer customer)
     {
         var newCustomer = await _service.Create(customer);
@@ -47,7 +47,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newCustomer.CustomerID }, customer);
     }
 
-    [HttpPut("{id}", Name = "EditCustomer")]
+    [HttpPut("edit", Name = "EditCustomer")]
     public async Task<IActionResult> Update(int id, Customer customer)
     {
       if ( id <= 0 )
@@ -72,26 +72,5 @@ namespace api.Controllers
         return ErrorUtilities.BrandNotFound(id);
       }
     }
-
-    [HttpDelete("{id}", Name = "DeleteCustomer")]
-     public async Task<IActionResult> Delete(int id)
-    {
-      if ( id <= 0 )
-      {
-          return ErrorUtilities.IdPositive(id);
-      }
-
-      var customerToDelete = await _service.GetByID(id);
-
-      if (customerToDelete is not null)
-      {
-        await _service.Delete(id);
-        return Ok();
-      }
-      else
-      {
-        return ErrorUtilities.BrandNotFound(id);
-      }
-    }
-    }
+  }
 }
