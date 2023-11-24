@@ -2,14 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace api.Models
 {
     public class Region
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         [Required]
         [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'RegionID' property must be an integer.")]

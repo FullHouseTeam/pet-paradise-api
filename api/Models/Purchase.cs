@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
 namespace api.Models
 {
     public class Purchase
     {
-        [JsonIgnore]
+        //[JsonIgnore]
         [Required]
         [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'PurchaseID' property must be an integer.")]
