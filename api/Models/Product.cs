@@ -1,10 +1,11 @@
 
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 namespace api.Models
 {
     public class Product
     {
-        //[JsonIgnore]ç
+        [JsonIgnore]
         [Required]
         [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'ProductID' property must be an integer.")]
@@ -13,6 +14,7 @@ namespace api.Models
         [Required]
         [DefaultValue("Dog Chow")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
@@ -39,24 +41,28 @@ namespace api.Models
         [Required]
         [DefaultValue("Dog")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string AnimalCategory { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("-- Link URL --")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(300)]
         public string Image { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("This is a very economical dog food.")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(1000)]
         public string Description { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("Food")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string ProductType { get; set; }= string.Empty;
 

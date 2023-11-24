@@ -1,9 +1,11 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace api.Models
 {
     public class Review
     {
+        [JsonIgnore]
         [Required]
         [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'ReviewID' property must be an integer.")]
@@ -22,6 +24,7 @@ namespace api.Models
         [Required]
         [DefaultValue("This is a good product")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(200)]
         public string ReviewMessage { get; set; }= string.Empty;
     }
