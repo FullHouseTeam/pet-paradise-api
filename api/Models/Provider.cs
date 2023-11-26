@@ -7,22 +7,27 @@ namespace api.Models
     {
         [JsonIgnore]
         [Required]
-        [DefaultValue("1")]
+        [MyDefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'ProviderID' property must be a number.")]
         public int ProviderID { get; set; }
 
         [Required]
-        [DefaultValue("Ricardo Rodriguez Rojas")]
+        [MyDefaultValue("Ricardo Rodriguez Rojas")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(200)]
         public string Name { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("Bolivian")]
+        [MyDefaultValue("Bolivian")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(200)]
         public string Nationality { get; set; }= string.Empty;
+
+        [Required]
+        [MyDefaultValue("true")]
+        [BooleanValue(ErrorMessage = "The 'IsAvailable' property must be a valid boolean.")]
+        public bool IsAvailable { get; set; }
     }
 }

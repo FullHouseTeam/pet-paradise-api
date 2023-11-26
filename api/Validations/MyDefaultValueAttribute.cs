@@ -1,10 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
-public class DefaultValueAttribute : ValidationAttribute
+public class MyDefaultValueAttribute : ValidationAttribute
 {
     private readonly object _defaultValue;
 
-    public DefaultValueAttribute(object defaultValue)
+    public MyDefaultValueAttribute(object defaultValue)
     {
         _defaultValue = defaultValue;
     }
@@ -14,6 +14,11 @@ public class DefaultValueAttribute : ValidationAttribute
         if (value is null)
         {
             return ValidationResult.Success!;
+        }
+
+        if (value.GetType() != _defaultValue.GetType())
+        {
+            return new ValidationResult("El valor predeterminado debe ser del mismo tipo que el valor.");
         }
 
         return ValidationResult.Success!;

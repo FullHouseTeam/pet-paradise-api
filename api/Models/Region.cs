@@ -11,18 +11,18 @@ namespace api.Models
     {
         [JsonIgnore]
         [Required]
-        [DefaultValue("1")]
+        [MyDefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'RegionID' property must be an integer.")]
         public int RegionID { get; set; }
 
         [Required]
-        [DefaultValue("13.5")]
+        [MyDefaultValue("13.5")]
         [DecimalValue(ErrorMessage = "The 'MunicipalTax' property must be a decimal number.")]
         [RangeValueDecimal(0.001, 100)]
         public decimal MunicipalTax { get; set; }
 
         [Required]
-        [DefaultValue("16.5")]
+        [MyDefaultValue("16.5")]
         [DecimalValue(ErrorMessage = "The 'StatalTax' property must be a decimal number.")]
         [RangeValueDecimal(0.001, 100)]
         public decimal StatalTax { get; set; }
