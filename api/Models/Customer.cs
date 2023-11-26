@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace api.Models
 {
     public class Customer
     {
-        //[JsonIgnore]
+        [JsonIgnore]
         [Required]
         [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'CustomerID' property must be an integer.")]
@@ -12,6 +13,7 @@ namespace api.Models
 
         [Required]
         [DefaultValue("luchoespinoza@gmail.com")]
+        [StringOnly]
         [EmailAddress(ErrorMessage = "The email format is incorrect.")]
         [StringValue]
         [MaxLengthCharacters(40)]
@@ -20,12 +22,14 @@ namespace api.Models
         [Required]
         [DefaultValue("Lucho")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("AAglobal12")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string Password { get; set; }= string.Empty;
 
