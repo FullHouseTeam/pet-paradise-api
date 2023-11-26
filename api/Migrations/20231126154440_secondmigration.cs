@@ -4,10 +4,8 @@
 
 namespace api.Migrations
 {
-    /// <inheritdoc />
-    public partial class secondmigration : Migration
+    public partial class Secondmigration : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<bool>(

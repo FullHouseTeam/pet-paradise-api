@@ -8,8 +8,8 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231126154440_secondmigration")]
-    partial class Secondmigration
+    [Migration("20231126170718_thirdmigration")]
+    partial class Thirdmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

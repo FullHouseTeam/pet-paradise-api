@@ -13,13 +13,13 @@ namespace api.Models
         [Required]
         [DefaultValue("13.5")]
         [DecimalValue(ErrorMessage = "The 'MunicipalTax' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 100)]
+        [RangeValueDecimal(0.01, 100)]
         public decimal MunicipalTax { get; set; }
 
         [Required]
         [DefaultValue("16.5")]
         [DecimalValue(ErrorMessage = "The 'StatalTax' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 100)]
+        [RangeValueDecimal(0.01, 100)]
         public decimal StatalTax { get; set; }
     }
 }
