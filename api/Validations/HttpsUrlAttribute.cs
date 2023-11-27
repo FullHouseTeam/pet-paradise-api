@@ -9,7 +9,7 @@ public class HttpsUrlAttribute : ValidationAttribute
         {
             string url = value.ToString();
 
-            if (url.StartsWith("https:", StringComparison.OrdinalIgnoreCase))
+            if (url.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
             {
                 return ValidationResult.Success!;
             }

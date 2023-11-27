@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -20,7 +19,7 @@ namespace api.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Logo = table.Column<string>(type: "text", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "boolean", nullable: false)
+                    IsAvailable = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,8 +59,8 @@ namespace api.Migrations
                     ProductType = table.Column<string>(type: "text", nullable: false),
                     BrandID = table.Column<int>(type: "integer", nullable: false),
                     ProviderID = table.Column<int>(type: "integer", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "boolean", nullable: false),
-                    HasTax = table.Column<bool>(type: "boolean", nullable: false)
+                    IsAvailable = table.Column<string>(type: "text", nullable: false),
+                    HasTax = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -76,7 +75,7 @@ namespace api.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Nationality = table.Column<string>(type: "text", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "boolean", nullable: false)
+                    IsAvailable = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,7 +89,7 @@ namespace api.Migrations
                     PurchaseID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     TotalPrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    ReportDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ReportDate = table.Column<string>(type: "text", nullable: false),
                     ObtainedTaxes = table.Column<decimal>(type: "numeric", nullable: false),
                     ApplicationTax = table.Column<decimal>(type: "numeric", nullable: false),
                     DeliveryTime = table.Column<decimal>(type: "numeric", nullable: false),

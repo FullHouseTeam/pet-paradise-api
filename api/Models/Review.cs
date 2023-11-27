@@ -11,17 +11,17 @@ namespace api.Models
         public int ReviewID { get; set; }
 
         [Required]
-        [DefaultValue("1")]
+        //[DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'CustomerID' property must be an integer.")]
         public int CustomerID { get; set; }
 
         [Required]
-        [DefaultValue("1")]
+        //[DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'ProductID' property must be an integer.")]
         public int ProductID { get; set; }
 
         [Required]
-        [DefaultValue("This is a good product")]
+        //[DefaultValue("This is a good product")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(200)]
