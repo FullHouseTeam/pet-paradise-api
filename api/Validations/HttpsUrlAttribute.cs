@@ -1,18 +1,21 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
-public class DecimalValue : ValidationAttribute
+public class HttpsUrlAttribute : ValidationAttribute
 {
     protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
         if (value is not null)
         {
-            if (decimal.TryParse(value.ToString(), out _))
+            string url = value.ToString();
+
+            if (url.StartsWith("https:", StringComparison.OrdinalIgnoreCase))
             {
                 return ValidationResult.Success!;
             }
             else
             {
-                return new ValidationResult(ErrorMessage ?? "The value must be a decimal number.");
+                return new ValidationResult(ErrorMessage ?? "The URL must start with 'https:'.");
             }
         }
 

@@ -1,12 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace api.Models
 {
     public class Purchase
     {
-        //[JsonIgnore]
+        [JsonIgnore]
         [Required]
-        [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'PurchaseID' property must be an integer.")]
         public int PurchaseID { get; set; }
 
@@ -14,7 +14,7 @@ namespace api.Models
         [DefaultValue("15.5")]
         [DecimalPrecision(2, ErrorMessage = "The 'TotalPrice' property must have up to 2 decimal places.")]
         [DecimalValue(ErrorMessage = "The 'TotalPrice' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 500000)]
+        [RangeValueDecimal(0.01, 500000)]
         public decimal TotalPrice { get; set; }
 
         [Required]
@@ -25,21 +25,21 @@ namespace api.Models
         [DefaultValue("13.5")]
         [DecimalPrecision(2, ErrorMessage = "The 'ObtainedTaxes' property must have up to 2 decimal places.")]
         [DecimalValue(ErrorMessage = "The 'ObtainedTaxes' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 100)]
+        [RangeValueDecimal(0.01, 100)]
         public decimal ObtainedTaxes { get; set; }
 
         [Required]
         [DefaultValue("4.5")]
         [DecimalPrecision(2, ErrorMessage = "The 'ApplicationTax' property must have up to 2 decimal places.")]
         [DecimalValue(ErrorMessage = "The 'ApplicationTax' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 100)]
+        [RangeValueDecimal(0.01, 100)]
         public decimal ApplicationTax { get; set; }
 
         [Required]
         [DefaultValue("4.0")]
         [DecimalPrecision(2, ErrorMessage = "The 'DeliveryTime' property must have up to 2 decimal places.")]
         [DecimalValue(ErrorMessage = "The 'DeliveryTime' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 20)]
+        [RangeValueDecimal(0.01, 20)]
         public decimal DeliveryTime { get; set; }
 
         [Required]

@@ -9,11 +9,20 @@ public class DefaultValueAttribute : ValidationAttribute
         _defaultValue = defaultValue;
     }
 
+    public override bool RequiresValidationContext => true;
+
     protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
-        if (value is null)
+        var memberName = validationContext.MemberName;
+
+        if (memberName != null)
         {
-            return ValidationResult.Success!;
+            var propertyInfo = validationContext.ObjectType.GetProperty(memberName);
+
+            if (propertyInfo != null && propertyInfo.CanWrite)
+            {
+                propertyInfo.SetValue(validationContext.ObjectInstance, _defaultValue);
+            }
         }
 
         return ValidationResult.Success!;

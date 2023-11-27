@@ -1,18 +1,19 @@
-
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
 namespace api.Models
 {
     public class Product
     {
-        //[JsonIgnore]ç
+        [JsonIgnore]
         [Required]
-        [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'ProductID' property must be an integer.")]
         public int ProductID { get; set; }
 
         [Required]
         [DefaultValue("Dog Chow")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
@@ -39,24 +40,29 @@ namespace api.Models
         [Required]
         [DefaultValue("Dog")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string AnimalCategory { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("-- Link URL --")]
+        [DefaultValue("https://www.agrocampo.com.co/media/catalog/product/cache/d51e0dc10c379a6229d70d752fc46d83/1/1/111101688_ed-min.jpg")]
+        [HttpsUrl(ErrorMessage = "The 'Image' URL must start with 'https:'.")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(300)]
         public string Image { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("This is a very economical dog food.")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(1000)]
         public string Description { get; set; }= string.Empty;
 
         [Required]
         [DefaultValue("Food")]
         [StringValue]
+        [StringOnly]
         [MaxLengthCharacters(40)]
         public string ProductType { get; set; }= string.Empty;
 
@@ -72,10 +78,12 @@ namespace api.Models
 
         [Required]
         [DefaultValue("true")]
+        [BooleanValue(ErrorMessage = "The 'IsAvailable' property must be a valid boolean.")]
         public bool IsAvailable { get; set; }
 
         [Required]
         [DefaultValue("false")]
+        [BooleanValue(ErrorMessage = "The 'HasTax' property must be a valid boolean.")]
         public bool HasTax { get; set; }      
     }
 }

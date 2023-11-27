@@ -1,29 +1,25 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace api.Models
 {
     public class Region
     {
-        //[JsonIgnore]
+        [JsonIgnore]
         [Required]
-        [DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'RegionID' property must be an integer.")]
         public int RegionID { get; set; }
 
         [Required]
         [DefaultValue("13.5")]
         [DecimalValue(ErrorMessage = "The 'MunicipalTax' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 100)]
+        [RangeValueDecimal(0.01, 100)]
         public decimal MunicipalTax { get; set; }
 
         [Required]
         [DefaultValue("16.5")]
         [DecimalValue(ErrorMessage = "The 'StatalTax' property must be a decimal number.")]
-        [RangeValueDecimal(0.001, 100)]
+        [RangeValueDecimal(0.01, 100)]
         public decimal StatalTax { get; set; }
     }
 }
