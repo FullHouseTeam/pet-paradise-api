@@ -7,7 +7,7 @@ namespace api.Models
     {
         [JsonIgnore]
         [Required]
-        [IntegerValue(ErrorMessage = "The 'CustomerID' property must be an integer.")]
+        [IntegerValue(ErrorMessage = "The 'BrandID' property must be an integer.")]
         public int BrandID { get; set; }
 
         [Required]
