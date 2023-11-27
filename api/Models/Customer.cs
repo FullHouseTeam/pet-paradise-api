@@ -11,7 +11,7 @@ namespace api.Models
         public int CustomerID { get; set; }
 
         [Required]
-        [DefaultValue("luchoespinoza@gmail.com")]
+        //[DefaultValue("luchoespinoza@gmail.com")]
         [StringOnly]
         [EmailAddress(ErrorMessage = "The email format is incorrect.")]
         [StringValue]
@@ -19,27 +19,27 @@ namespace api.Models
         public string Email { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("Lucho")]
+        //[DefaultValue("Lucho")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(40)]
         public string Name { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("AAglobal12")]
+        //[DefaultValue("AAglobal12")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(40)]
         public string Password { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("1")]
+        //[DefaultValue("1")]
         [IntegerValue(ErrorMessage = "The 'RegionID' property must be an integer.")]
 
         public int RegionID { get; set; }
 
         [Required]
-        [DefaultValue("9628512")]
+        //[DefaultValue("9628512")]
         [IntegerValue(ErrorMessage = "The 'Nit' property must be an integer.")]
         [RangeValueInt(6000000, 9999999)]
         public int Nit { get; set; }

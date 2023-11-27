@@ -11,22 +11,21 @@ namespace api.Models
         public int ProviderID { get; set; }
 
         [Required]
-        [DefaultValue("Ricardo Rodriguez Rojas")]
+        //[DefaultValue("Ricardo Rodriguez Rojas")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(200)]
         public string Name { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("Bolivian")]
+        //[DefaultValue("Bolivian")]
         [StringValue]
         [StringOnly]
         [MaxLengthCharacters(200)]
         public string Nationality { get; set; }= string.Empty;
 
         [Required]
-        [DefaultValue("true")]
-        [BooleanValue(ErrorMessage = "The 'IsAvailable' property must be a valid boolean.")]
-        public bool IsAvailable { get; set; }
+        //[DefaultValue("true")]
+        public string IsAvailable { get; set; }= string.Empty;
     }
 }
