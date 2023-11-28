@@ -24,8 +24,6 @@ builder.Services.AddScoped<RegionService>();
 builder.Services.AddScoped<PurchaseService>();
 builder.Services.AddScoped<ReviewService>();
 
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("NewPolicy", app =>
