@@ -2,10 +2,12 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PurchaseController : ControllerBase
@@ -40,6 +42,7 @@ namespace api.Controllers
         return purchase;
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPost("save", Name = "AddPurchase")]
     public async Task<IActionResult> Create(PurchaseDTO purchaseDTO)
     {
@@ -48,6 +51,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newPurchase.PurchaseID }, purchaseDTO);
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPut("edit", Name = "EditPurchase")]
     public async Task<IActionResult> Update(int id, PurchaseDTO purchaseDTO)
     {

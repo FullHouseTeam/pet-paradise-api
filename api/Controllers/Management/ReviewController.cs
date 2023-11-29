@@ -68,5 +68,19 @@ namespace api.Controllers
         return ErrorUtilities.FieldNotFound("Review", id);
       }
     }
+
+    [HttpDelete("delete", Name = "DeleteReview")]
+    public async Task<IActionResult> Delete(int id)
+    {
+      var existingReview = await _service.GetByID(id);
+
+      if (existingReview is not null)
+      {
+        await _service.Delete(id);
+        return Ok();
+      } else {
+        return ErrorUtilities.FieldNotFound("Review", id);
+      }
+    }
   }
 }

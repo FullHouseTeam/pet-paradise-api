@@ -3,9 +3,11 @@ using api.Models;
 using Microsoft.AspNetCore.Mvc;
 using api.Utilities;
 using api.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
@@ -35,6 +37,7 @@ namespace api.Controllers
         return product;
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPost("save", Name = "AddProduct")]
     public async Task<IActionResult> Create(ProductDTO productDTO)
     {
@@ -46,6 +49,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProduct.ProductID }, productDTO);
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPut("edit", Name = "EditProduct")]
     public async Task<IActionResult> Update(int id, ProductDTO productDTO)
     {

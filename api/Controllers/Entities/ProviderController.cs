@@ -2,10 +2,12 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProviderController : ControllerBase
@@ -40,6 +42,7 @@ namespace api.Controllers
         return provider;
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPost("save", Name = "AddProvider")]
     public async Task<IActionResult> Create(ProviderDTO providerDTO)
     {
@@ -51,6 +54,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProvider.ProviderID }, providerDTO);
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPut("edit", Name = "EditProvider")]
     public async Task<IActionResult> Update(int id, ProviderDTO providerDTO)
     {

@@ -2,10 +2,12 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class BrandController : ControllerBase
@@ -41,6 +43,7 @@ namespace api.Controllers
         return brand;
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPost("save", Name = "AddBrand")]
     public async Task<IActionResult> Create(BrandDTO brandDTO)
     {
@@ -52,6 +55,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newBrand.BrandID }, brandDTO);
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpPut("edit", Name = "EditBrand")]
     public async Task<IActionResult> Update(int id, BrandDTO brandDTO)
     {

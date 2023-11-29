@@ -2,10 +2,12 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class RegionController : ControllerBase
@@ -17,12 +19,14 @@ namespace api.Controllers
         _service = service;
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpGet("list", Name = "GetRegions")]
     public async Task<IEnumerable<Region>> Get()
     {
         return await _service.GetAll();
     }
 
+    [Authorize(Policy = "SuperAdministrator")]
     [HttpGet("list/id", Name = "GetRegion")]
     public async Task<ActionResult<Region>> GetById(int id)
     {
