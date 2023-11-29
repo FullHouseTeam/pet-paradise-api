@@ -26,18 +26,18 @@ namespace api.Controllers
     [HttpGet("list/id", Name = "GetRegion")]
     public async Task<ActionResult<Region>> GetById(int id)
     {
-        var product = await _service.GetByID(id);
+        var region = await _service.GetByID(id);
 
         if ( id <= 0 )
         {
           return ErrorUtilities.IdPositive(id);
         }
 
-        if (product == null)
+        if (region == null)
         {
           return ErrorUtilities.FieldNotFound("Region", id);
         }
-        return product;
+        return region;
     }
 
     [HttpPost("save", Name = "AddRegion")]

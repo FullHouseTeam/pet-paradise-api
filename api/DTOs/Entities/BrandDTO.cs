@@ -10,6 +10,7 @@ namespace api.DTOs
         [Required("Name")]
         [StringValue("Name")]
         [NoSpecialCharacters("Name")]
+        [NoNumbers("Name")]
         [MaxLengthCharacters("Name", 40)]
         public string Name { get; set; }= string.Empty;
 

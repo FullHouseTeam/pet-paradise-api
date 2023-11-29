@@ -21,6 +21,7 @@ namespace api.DTOs
         [Required("ReviewMessage")]
         [StringValue("ReviewMessage")]
         [NoSpecialCharacters("ReviewMessage")]
+        [NoNumbers("ReviewMessage")]
         [MaxLengthCharacters("ReviewMessage", 150)]
         public string ReviewMessage { get; set; }= string.Empty;
     }

@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
 public class HttpsUrlAttribute : ValidationAttribute
@@ -18,7 +17,6 @@ public class HttpsUrlAttribute : ValidationAttribute
                 return new ValidationResult(ErrorMessage ?? "The URL must start with 'https:'.");
             }
         }
-
         return ValidationResult.Success!;
     }
 }

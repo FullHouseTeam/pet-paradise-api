@@ -2,11 +2,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using api.Utilities;
 
-public class NoSpecialCharactersAttribute : ValidationAttribute
+public class NoNumbersAttribute : ValidationAttribute
 {
-    public NoSpecialCharactersAttribute(string value)
+    public NoNumbersAttribute(string value)
     {
-        ErrorMessage = ErrorUtilities.NoSpecialCharacters(value);
+        ErrorMessage = ErrorUtilities.NoSpecialNumbers(value);
     }
 
     protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
@@ -14,7 +14,7 @@ public class NoSpecialCharactersAttribute : ValidationAttribute
         if (value != null)
         {
             string stringValue = value.ToString();
-            var regex = new Regex("^[a-zA-Z0-9 ]*$");
+            var regex = new Regex("^[a-zA-Z ]*$");
 
             if (!regex.IsMatch(stringValue))
             {

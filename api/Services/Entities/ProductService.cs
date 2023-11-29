@@ -73,7 +73,7 @@ namespace api.Services
       existingProduct.Name = productDTO.Name;
       existingProduct.Price = productDTO.Price;
       existingProduct.Quantity = productDTO.Quantity;
-      existingProduct.Discount = productDTO.Quantity;
+      existingProduct.Discount = productDTO.Discount;
       existingProduct.AnimalCategory = productDTO.AnimalCategory;
       existingProduct.Image = productDTO.Image;
       existingProduct.Description = productDTO.Description;

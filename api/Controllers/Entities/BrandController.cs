@@ -27,18 +27,18 @@ namespace api.Controllers
     [HttpGet("list/id", Name = "GetBrand")]
     public async Task<ActionResult<Brand>> GetById(int id)
     {
-        var product = await _service.GetByID(id);
+        var brand = await _service.GetByID(id);
 
         if ( id <= 0 )
         {
           return ErrorUtilities.IdPositive(id);
         }
 
-        if (product == null)
+        if (brand == null)
         {
           return ErrorUtilities.FieldNotFound("Brand", id);
         }
-        return product;
+        return brand;
     }
 
     [HttpPost("save", Name = "AddBrand")]

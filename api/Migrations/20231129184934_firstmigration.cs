@@ -5,10 +5,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace api.Migrations
 {
-    /// <inheritdoc />
-    public partial class firstmigration : Migration
+    public partial class Firstmigration : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -93,6 +91,7 @@ namespace api.Migrations
                     ObtainedTaxes = table.Column<decimal>(type: "numeric", nullable: false),
                     ApplicationTax = table.Column<decimal>(type: "numeric", nullable: false),
                     DeliveryTime = table.Column<decimal>(type: "numeric", nullable: false),
+                    LocalQuantity = table.Column<int>(type: "integer", nullable: false),
                     ProductID = table.Column<int>(type: "integer", nullable: false),
                     UserID = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -129,6 +128,24 @@ namespace api.Migrations
                 {
                     table.PrimaryKey("PK_Reviews", x => x.ReviewID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Sales",
+                columns: table => new
+                {
+                    SaleID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ZipCode = table.Column<string>(type: "text", nullable: false),
+                    Cvv = table.Column<int>(type: "integer", nullable: false),
+                    CardNumber = table.Column<string>(type: "text", nullable: false),
+                    Date = table.Column<string>(type: "text", nullable: false),
+                    FinalPrice = table.Column<decimal>(type: "numeric", nullable: false),
+                    UserID = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sales", x => x.SaleID);
+                });
         }
 
         /// <inheritdoc />
@@ -154,6 +171,9 @@ namespace api.Migrations
 
             migrationBuilder.DropTable(
                 name: "Reviews");
+
+            migrationBuilder.DropTable(
+                name: "Sales");
         }
     }
 }

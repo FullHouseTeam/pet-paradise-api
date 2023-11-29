@@ -33,6 +33,7 @@ namespace api.Services
       newPurchase.ReportDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");;
       newPurchase.ApplicationTax = 7.5M;
       newPurchase.DeliveryTime = newPurchaseDTO.DeliveryTime;
+      newPurchase.LocalQuantity = newPurchaseDTO.LocalQuantity;
       newPurchase.ProductID = newPurchaseDTO.ProductID;
       newPurchase.UserID = newPurchaseDTO.UserID;
       
@@ -51,6 +52,7 @@ namespace api.Services
       existingPurchase.TotalPrice = purchaseDTO.TotalPrice;
       existingPurchase.ObtainedTaxes = purchaseDTO.ObtainedTaxes;
       existingPurchase.DeliveryTime = purchaseDTO.DeliveryTime;
+      existingPurchase.LocalQuantity =purchaseDTO.LocalQuantity;
       existingPurchase.ProductID = purchaseDTO.ProductID;
       existingPurchase.UserID = purchaseDTO.UserID;
 

@@ -19,6 +19,11 @@ namespace api.Utilities
             return new NotFoundObjectResult(new { message = $"The {value} name already exists. Provide a unique name." });
         }
 
+        public static NotFoundObjectResult EmailName(string value)
+        {
+            return new NotFoundObjectResult(new { message = $"The {value} email already exists. Provide a unique email." });
+        }
+
         public static string ValidateString(string value) => $"This field needs ({value}) to be a String.";
 
         public static string ValidateInt(string value) => $"This field needs ({value}) to be a String.";
@@ -34,5 +39,7 @@ namespace api.Utilities
         public static string IsRequired(string value) => $"This field ({value}) is required.";
 
         public static string NoSpecialCharacters(string value) => $"The ({value}) field must not contain special characters";
+
+        public static string NoSpecialNumbers(string value) => $"The ({value}) field must not contain numbers";
         }
 }

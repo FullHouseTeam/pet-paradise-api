@@ -26,6 +26,11 @@ namespace api.DTOs
         [RangeValueDecimal(0.01, 20)]
         public decimal DeliveryTime { get; set; }
 
+        [Required("LocalQuantity")]
+        [IntegerValue("LocalQuantity")]
+        [PositiveNumber("LocalQuantity")]
+        public int LocalQuantity { get; set; }
+
         [Required("ProductID")]
         [IntegerValue("ProductID")]
         [PositiveNumber("ProductID")]

@@ -1,4 +1,5 @@
 using api.Models;
+using api.Models.Transactions;
 using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
@@ -17,5 +18,6 @@ namespace api.Data
         public DbSet<Region> Regions => Set<Region>();
         public DbSet<Purchase> Purchases => Set<Purchase>();
         public DbSet<Review> Reviews => Set<Review>();
+        public DbSet<Sale> Sales => Set<Sale>();
     }
 }

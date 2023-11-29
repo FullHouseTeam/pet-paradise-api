@@ -26,26 +26,30 @@ namespace api.Controllers
     [HttpGet("list/id", Name = "GetCustomer")]
     public async Task<ActionResult<Customer>> GetById(int id)
     {
-        var product = await _service.GetByID(id);
+        var customer = await _service.GetByID(id);
 
         if ( id <= 0 )
         {
           return ErrorUtilities.IdPositive(id);
         }
 
-        if (product == null)
+        if (customer == null)
         {
           return ErrorUtilities.FieldNotFound("Customer", id);
         }
-        return product;
+        return customer;
     }
 
     [HttpPost("save", Name = "AddCustomer")]
     public async Task<IActionResult> Create(CustomerDTO customerDTO)
     {
         var newCustomer = await _service.Create(customerDTO);
-        if (newCustomer.Name.Equals("error_409_validations")) {
+        if (newCustomer.Name.Equals("name_error_409_validations")) {
            return ErrorUtilities.UniqueName("Customer");
+        }
+
+        if (newCustomer.Email.Equals("email_error_409_validations")) {
+           return ErrorUtilities.EmailName("Email");
         }
 
         return CreatedAtAction(nameof(GetById), new { id = newCustomer.CustomerID }, customerDTO);

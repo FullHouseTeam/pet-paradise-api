@@ -29,7 +29,14 @@ namespace api.Services
       if (await IsBrandNameUnique(newCustomerDTO.Name))
       {
         var customer = new Customer();
-        customer.Name = "error_409_validations";
+        customer.Name = "name_error_409_validations";
+        return customer;
+      }
+
+      if (await IsEmailUnique(newCustomerDTO.Email))
+      {
+        var customer = new Customer();
+        customer.Email = "email_error_409_validations";
         return customer;
       }
 
@@ -83,6 +90,12 @@ namespace api.Services
     {
     var customers = await _context.Customers.AsNoTracking().ToListAsync();
     return customers.Any(b => string.Equals(b.Name, customerName, StringComparison.OrdinalIgnoreCase));
+    }
+
+    public async Task<bool> IsEmailUnique(string customerEmail)
+    {
+    var customers = await _context.Customers.AsNoTracking().ToListAsync();
+    return customers.Any(b => string.Equals(b.Email, customerEmail, StringComparison.OrdinalIgnoreCase));
     }
     }
 }
