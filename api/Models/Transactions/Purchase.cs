@@ -8,6 +8,7 @@ namespace api.Models
         public decimal ObtainedTaxes { get; set; }
         public decimal ApplicationTax { get; set; }
         public decimal DeliveryTime { get; set; }
+        public int LocalQuantity { get; set; }
         public int ProductID { get; set; }
         public int UserID { get; set; }
     }

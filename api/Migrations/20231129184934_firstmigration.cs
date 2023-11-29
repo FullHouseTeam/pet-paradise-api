@@ -91,6 +91,7 @@ namespace api.Migrations
                     ObtainedTaxes = table.Column<decimal>(type: "numeric", nullable: false),
                     ApplicationTax = table.Column<decimal>(type: "numeric", nullable: false),
                     DeliveryTime = table.Column<decimal>(type: "numeric", nullable: false),
+                    LocalQuantity = table.Column<int>(type: "integer", nullable: false),
                     ProductID = table.Column<int>(type: "integer", nullable: false),
                     UserID = table.Column<int>(type: "integer", nullable: false)
                 },
