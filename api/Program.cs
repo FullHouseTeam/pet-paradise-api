@@ -23,6 +23,7 @@ builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<RegionService>();
 builder.Services.AddScoped<PurchaseService>();
 builder.Services.AddScoped<ReviewService>();
+builder.Services.AddScoped<SaleService>();
 
 builder.Services.AddCors(options =>
 {

@@ -12,6 +12,7 @@ namespace api.DTOs
         [Required("Name")]
         [StringValue("Name")]
         [NoSpecialCharacters("Name")]
+        [NoNumbers("Name")]
         [MaxLengthCharacters("Name", 40)]
         public string Name { get; set; }= string.Empty;
 
@@ -35,6 +36,7 @@ namespace api.DTOs
         [Required("AnimalCategory")]
         [StringValue("AnimalCategory")]
         [NoSpecialCharacters("AnimalCategory")]
+        [NoNumbers("AnimalCategory")]
         [MaxLengthCharacters("AnimalCategory", 40)]
         public string AnimalCategory { get; set; }= string.Empty;
 
@@ -47,12 +49,14 @@ namespace api.DTOs
         [Required("Description")]
         [StringValue("Description")]
         [NoSpecialCharacters("Description")]
+        [NoNumbers("Description")]
         [MaxLengthCharacters("Description", 1000)]
         public string Description { get; set; }= string.Empty;
 
         [Required("ProductType")]
         [StringValue("ProductType")]
         [NoSpecialCharacters("ProductType")]
+        [NoNumbers("ProductType")]
         [MaxLengthCharacters("ProductType", 40)]
         public string ProductType { get; set; }= string.Empty;
 

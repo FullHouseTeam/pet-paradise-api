@@ -1,22 +1,20 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
-using api.Utilities;
 
-public class NoSpecialCharactersAttribute : ValidationAttribute
+public class OnlyNumbersAttribute : ValidationAttribute
 {
-    public NoSpecialCharactersAttribute(string value)
+    public OnlyNumbersAttribute()
     {
-        ErrorMessage = ErrorUtilities.NoSpecialCharacters(value);
+        ErrorMessage = "Only numbers are allowed in this field String.";
     }
 
     protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
         if (value != null)
         {
-            string stringValue = value.ToString();
-            var regex = new Regex("^[a-zA-Z0-9 ]*$");
-
-            if (!regex.IsMatch(stringValue))
+            string input = value.ToString();
+            var regex = new Regex("^[0-9]*$");
+            if (!regex.IsMatch(input))
             {
                 return new ValidationResult(ErrorMessage);
             }

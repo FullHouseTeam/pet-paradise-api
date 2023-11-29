@@ -11,18 +11,21 @@ namespace api.DTOs
         [Required("Email")]
         [StringValue("Email")]
         [EmailAddress(ErrorMessage = "The email format is incorrect.")]
+        [CustomEmailFormat]
         [MaxLengthCharacters("Email", 40)]
         public string Email { get; set; }= string.Empty;
 
         [Required("Name")]
         [StringValue("Name")]
         [NoSpecialCharacters("Name")]
+        [NoNumbers("Name")]
         [MaxLengthCharacters("Name", 40)]
         public string Name { get; set; }= string.Empty;
 
         [Required("Password")]
         [StringValue("Password")]
         [MaxLengthCharacters("Password", 20)]
+        [PasswordFormat]
         public string Password { get; set; }= string.Empty;
 
         [Required("RegionID")]

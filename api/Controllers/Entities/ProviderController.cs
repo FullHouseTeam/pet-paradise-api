@@ -26,18 +26,18 @@ namespace api.Controllers
     [HttpGet("list/id", Name = "GetProvider")]
     public async Task<ActionResult<Provider>> GetById(int id)
     {
-        var product = await _service.GetByID(id);
+        var provider = await _service.GetByID(id);
 
         if ( id <= 0 )
         {
           return ErrorUtilities.IdPositive(id);
         }
 
-        if (product == null)
+        if (provider == null)
         {
           return ErrorUtilities.FieldNotFound("Provider", id);
         }
-        return product;
+        return provider;
     }
 
     [HttpPost("save", Name = "AddProvider")]

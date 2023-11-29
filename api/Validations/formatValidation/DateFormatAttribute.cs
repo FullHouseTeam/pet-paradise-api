@@ -1,26 +1,27 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
-using api.Utilities;
 
-public class NoSpecialCharactersAttribute : ValidationAttribute
+public class DateFormatAttribute : ValidationAttribute
 {
-    public NoSpecialCharactersAttribute(string value)
+    public DateFormatAttribute()
     {
-        ErrorMessage = ErrorUtilities.NoSpecialCharacters(value);
+        ErrorMessage = "The date format should be MM/YYYY.";
     }
 
     protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
         if (value != null)
         {
-            string stringValue = value.ToString();
-            var regex = new Regex("^[a-zA-Z0-9 ]*$");
+            string dateStr = value.ToString();
+            var regex = new Regex(@"^(0[1-9]|1[0-2])/\d{4}$");
 
-            if (!regex.IsMatch(stringValue))
+            if (!regex.IsMatch(dateStr))
             {
                 return new ValidationResult(ErrorMessage);
             }
         }
+
         return ValidationResult.Success;
     }
 }
