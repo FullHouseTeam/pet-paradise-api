@@ -21,6 +21,7 @@ namespace api.DTOs
         public string Logo { get; set; }= string.Empty;
 
         [Required("IsAvailable")]
+        [BooleanValue]
         public bool IsAvailable { get; set; }
     }
 }

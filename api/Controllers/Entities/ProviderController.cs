@@ -2,6 +2,7 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -41,6 +42,7 @@ namespace api.Controllers
     }
 
     [HttpPost("save", Name = "AddProvider")]
+    [Authorize]
     public async Task<IActionResult> Create(ProviderDTO providerDTO)
     {
         var newProvider = await _service.Create(providerDTO);
@@ -52,6 +54,7 @@ namespace api.Controllers
     }
 
     [HttpPut("edit", Name = "EditProvider")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, ProviderDTO providerDTO)
     {
       if ( id <= 0 )

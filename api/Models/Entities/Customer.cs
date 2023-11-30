@@ -8,5 +8,6 @@ namespace api.Models
         public string Password { get; set; }= string.Empty;
         public int RegionID { get; set; }
         public int Nit { get; set; }
+        public string IsAvailable { get; set; }= string.Empty;
     }
 }

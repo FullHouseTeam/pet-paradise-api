@@ -36,6 +36,11 @@ namespace api.Services
       newPurchase.LocalQuantity = newPurchaseDTO.LocalQuantity;
       newPurchase.ProductID = newPurchaseDTO.ProductID;
       newPurchase.UserID = newPurchaseDTO.UserID;
+      if (newPurchaseDTO.IsAvailable) {
+        newPurchase.IsAvailable = "true";
+      } else {
+        newPurchase.IsAvailable = "false";
+      }
       
       _context.Purchases.Add(newPurchase);
       await _context.SaveChangesAsync();
@@ -55,6 +60,11 @@ namespace api.Services
       existingPurchase.LocalQuantity =purchaseDTO.LocalQuantity;
       existingPurchase.ProductID = purchaseDTO.ProductID;
       existingPurchase.UserID = purchaseDTO.UserID;
+      if (purchaseDTO.IsAvailable) {
+        existingPurchase.IsAvailable = "true";
+      } else {
+        existingPurchase.IsAvailable = "false";
+      }
 
       await _context.SaveChangesAsync();
      }

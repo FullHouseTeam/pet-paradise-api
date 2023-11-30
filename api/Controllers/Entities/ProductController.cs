@@ -3,6 +3,7 @@ using api.Models;
 using Microsoft.AspNetCore.Mvc;
 using api.Utilities;
 using api.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
@@ -36,6 +37,7 @@ namespace api.Controllers
     }
 
     [HttpPost("save", Name = "AddProduct")]
+    [Authorize]
     public async Task<IActionResult> Create(ProductDTO productDTO)
     {
         var newProduct = await _service.Create(productDTO);
@@ -47,6 +49,7 @@ namespace api.Controllers
     }
 
     [HttpPut("edit", Name = "EditProduct")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, ProductDTO productDTO)
     {
       if ( id <= 0 )

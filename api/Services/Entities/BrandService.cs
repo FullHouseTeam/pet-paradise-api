@@ -45,7 +45,6 @@ namespace api.Services
         newBrand.IsAvailable = "false";
       }
       
-
       _context.Brands.Add(newBrand);
       await _context.SaveChangesAsync();
 

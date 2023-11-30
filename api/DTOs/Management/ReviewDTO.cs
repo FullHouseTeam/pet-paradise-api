@@ -15,7 +15,6 @@ namespace api.DTOs
         [Required("ProductID")]
         [IntegerValue("ProductID")]
         [PositiveNumber("ProductID")]
-
         public int ProductID { get; set; }
 
         [Required("ReviewMessage")]

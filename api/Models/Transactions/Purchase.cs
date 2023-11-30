@@ -11,5 +11,6 @@ namespace api.Models
         public int LocalQuantity { get; set; }
         public int ProductID { get; set; }
         public int UserID { get; set; }
+        public string IsAvailable { get; set; }= string.Empty;
     }
 }

@@ -2,6 +2,7 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -42,6 +43,7 @@ namespace api.Controllers
     }
 
     [HttpPost("save", Name = "AddBrand")]
+    [Authorize]
     public async Task<IActionResult> Create(BrandDTO brandDTO)
     {
         var newBrand = await _service.Create(brandDTO);
@@ -53,6 +55,7 @@ namespace api.Controllers
     }
 
     [HttpPut("edit", Name = "EditBrand")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, BrandDTO brandDTO)
     {
       if ( id <= 0 )

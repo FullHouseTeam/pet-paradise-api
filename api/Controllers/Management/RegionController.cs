@@ -2,6 +2,7 @@ using api.DTOs;
 using api.Models;
 using api.Services;
 using api.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -41,6 +42,7 @@ namespace api.Controllers
     }
 
     [HttpPost("save", Name = "AddRegion")]
+    [Authorize]
     public async Task<IActionResult> Create(RegionDTO regionDTO)
     {
         var newRegion = await _service.Create(regionDTO);
@@ -49,6 +51,7 @@ namespace api.Controllers
     }
 
     [HttpPut("edit", Name = "EditRegion")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, RegionDTO regionDTO)
     {
       if ( id <= 0 )
