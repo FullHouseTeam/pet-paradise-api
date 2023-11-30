@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
@@ -37,8 +36,8 @@ namespace api.Controllers
         return product;
     }
 
-    [Authorize(Policy = "SuperAdministrator")]
     [HttpPost("save", Name = "AddProduct")]
+    [Authorize]
     public async Task<IActionResult> Create(ProductDTO productDTO)
     {
         var newProduct = await _service.Create(productDTO);
@@ -49,8 +48,8 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProduct.ProductID }, productDTO);
     }
 
-    [Authorize(Policy = "SuperAdministrator")]
     [HttpPut("edit", Name = "EditProduct")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, ProductDTO productDTO)
     {
       if ( id <= 0 )

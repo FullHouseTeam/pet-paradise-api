@@ -69,10 +69,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddAuthorization(options =>
-    options.AddPolicy("SuperAdministrator", policy => policy.RequireClaim("AdminType", "SuperAdministrator"))
-);
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("NewPolicy", app =>

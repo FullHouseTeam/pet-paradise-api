@@ -47,6 +47,11 @@ namespace api.Services
       newCustomer.Password = newCustomerDTO.Password;
       newCustomer.RegionID = newCustomerDTO.RegionID;
       newCustomer.Nit = newCustomerDTO.Nit;
+      if (newCustomerDTO.IsAvailable) {
+        newCustomer.IsAvailable = "true";
+      } else {
+        newCustomer.IsAvailable = "false";
+      }
 
       _context.Customers.Add(newCustomer);
       await _context.SaveChangesAsync();
@@ -65,6 +70,11 @@ namespace api.Services
       existingCustomer.Password = customerDTO.Password;
       existingCustomer.RegionID = customerDTO.RegionID;
       existingCustomer.Nit = customerDTO.Nit;
+      if (customerDTO.IsAvailable) {
+        existingCustomer.IsAvailable = "true";
+      } else {
+        existingCustomer.IsAvailable = "false";
+      }
 
       await _context.SaveChangesAsync();
      }

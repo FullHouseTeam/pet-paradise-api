@@ -4,13 +4,11 @@ using System.Text;
 using api.DTOs.Entities;
 using api.Models.Entities;
 using api.Services.Entities;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
 namespace api.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class LoginController : ControllerBase
@@ -30,7 +28,7 @@ namespace api.Controllers
         var admin = await loginService.GetAdmin(adminDTO);
 
         if (admin is null) {
-           return BadRequest(new { message = "Credenciales invalidas." });
+           return BadRequest(new { message = "Invalid credentials." });
         }
 
         string jwtToken = GenerateToken(admin);
@@ -43,9 +41,7 @@ namespace api.Controllers
             {
                 new Claim(ClaimTypes.Name, admin.Name),
                 new Claim(ClaimTypes.Email, admin.Email),
-                new Claim("AdminType", admin.AdminType)
             };
-
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("JWT:Key").Value));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

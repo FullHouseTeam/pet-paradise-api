@@ -71,9 +71,11 @@ namespace api.DTOs
         public int ProviderID { get; set; }
 
         [Required("IsAvailable")]
+        [BooleanValue]
         public bool IsAvailable { get; set; }
 
         [Required("HasTax")]
+        [BooleanValue]
         public bool HasTax { get; set; }
     }
 }

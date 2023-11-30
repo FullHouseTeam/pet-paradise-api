@@ -38,5 +38,9 @@ namespace api.DTOs
         [PositiveNumber("Nit")]
         [RangeValueInt(6000000, 9999999)]
         public int Nit { get; set; }
+
+        [Required("IsAvailable")]
+        [BooleanValue]
+        public bool IsAvailable { get; set; }
     }
 }

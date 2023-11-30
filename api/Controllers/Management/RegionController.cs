@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class RegionController : ControllerBase
@@ -19,14 +18,12 @@ namespace api.Controllers
         _service = service;
     }
 
-    [Authorize(Policy = "SuperAdministrator")]
     [HttpGet("list", Name = "GetRegions")]
     public async Task<IEnumerable<Region>> Get()
     {
         return await _service.GetAll();
     }
 
-    [Authorize(Policy = "SuperAdministrator")]
     [HttpGet("list/id", Name = "GetRegion")]
     public async Task<ActionResult<Region>> GetById(int id)
     {
@@ -45,6 +42,7 @@ namespace api.Controllers
     }
 
     [HttpPost("save", Name = "AddRegion")]
+    [Authorize]
     public async Task<IActionResult> Create(RegionDTO regionDTO)
     {
         var newRegion = await _service.Create(regionDTO);
@@ -53,6 +51,7 @@ namespace api.Controllers
     }
 
     [HttpPut("edit", Name = "EditRegion")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, RegionDTO regionDTO)
     {
       if ( id <= 0 )

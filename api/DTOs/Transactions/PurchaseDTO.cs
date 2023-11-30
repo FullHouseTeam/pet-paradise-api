@@ -40,5 +40,9 @@ namespace api.DTOs
         [IntegerValue("UserID")]
         [PositiveNumber("UserID")]
         public int UserID { get; set; }
+
+        [Required("IsAvailable")]
+        [BooleanValue]
+        public bool IsAvailable { get; set; }
     }
 }

@@ -26,29 +26,18 @@ namespace api.Services.Entities
             _context.Administrators.RemoveRange(existingAdmins);
             await _context.SaveChangesAsync();
 
-            var superAdministrator = new Administrator
+              var administrator = new Administrator
             {
             Name = "admin",
-            Email = "superadmin@admin.com",
-            AdminType = "SuperAdministrator",
+            Email = "admin@admin.com",
+            AdminType = "administrator",
             Password = "admin",
             RegisterDate = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
             Nit = new Random().Next(100000000, 999999999),
             PhoneNumber = new Random().Next(100000000, 999999999)
             };
 
-            var viewerAdministrator = new Administrator
-            {
-            Name = "admin",
-            Email = "vieweradmin@admin.com",
-            AdminType = "ViewerAdministrator",
-            Password = "admin",
-            RegisterDate = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
-            Nit = new Random().Next(100000000, 999999999),
-            PhoneNumber = new Random().Next(100000000, 999999999)
-            };
-            _context.Administrators.Add(superAdministrator);
-            _context.Administrators.Add(viewerAdministrator);
+            _context.Administrators.Add(administrator);
             await _context.SaveChangesAsync();
         }
     }

@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProviderController : ControllerBase
@@ -42,8 +41,8 @@ namespace api.Controllers
         return provider;
     }
 
-    [Authorize(Policy = "SuperAdministrator")]
     [HttpPost("save", Name = "AddProvider")]
+    [Authorize]
     public async Task<IActionResult> Create(ProviderDTO providerDTO)
     {
         var newProvider = await _service.Create(providerDTO);
@@ -54,8 +53,8 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProvider.ProviderID }, providerDTO);
     }
 
-    [Authorize(Policy = "SuperAdministrator")]
     [HttpPut("edit", Name = "EditProvider")]
+    [Authorize]
     public async Task<IActionResult> Update(int id, ProviderDTO providerDTO)
     {
       if ( id <= 0 )
