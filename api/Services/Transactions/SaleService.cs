@@ -34,6 +34,7 @@ namespace api.Services
       newSale.Date = newSaleDTO.Date;
       newSale.FinalPrice = newSaleDTO.FinalPrice;
       newSale.UserID = newSaleDTO.UserID;
+      newSale.IsAvailable = newSaleDTO.IsAvailable;
       
       _context.Sales.Add(newSale);
       await _context.SaveChangesAsync();
@@ -53,6 +54,7 @@ namespace api.Services
       existingSale.Date = saleDTO.Date;
       existingSale.FinalPrice = saleDTO.FinalPrice;
       existingSale.UserID = saleDTO.UserID;
+      existingSale.IsAvailable = saleDTO.IsAvailable;
 
       await _context.SaveChangesAsync();
      }

@@ -5,10 +5,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace api.Migrations
 {
-    /// <inheritdoc />
-    public partial class firstmigration : Migration
+    public partial class Firstmigration : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -55,7 +53,8 @@ namespace api.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     Password = table.Column<string>(type: "text", nullable: false),
                     RegionID = table.Column<int>(type: "integer", nullable: false),
-                    Nit = table.Column<int>(type: "integer", nullable: false)
+                    Nit = table.Column<int>(type: "integer", nullable: false),
+                    IsAvailable = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -114,7 +113,8 @@ namespace api.Migrations
                     DeliveryTime = table.Column<decimal>(type: "numeric", nullable: false),
                     LocalQuantity = table.Column<int>(type: "integer", nullable: false),
                     ProductID = table.Column<int>(type: "integer", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false)
+                    UserID = table.Column<int>(type: "integer", nullable: false),
+                    IsAvailable = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -127,6 +127,7 @@ namespace api.Migrations
                 {
                     RegionID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
                     MunicipalTax = table.Column<decimal>(type: "numeric", nullable: false),
                     StatalTax = table.Column<decimal>(type: "numeric", nullable: false)
                 },
@@ -161,7 +162,8 @@ namespace api.Migrations
                     CardNumber = table.Column<string>(type: "text", nullable: false),
                     Date = table.Column<string>(type: "text", nullable: false),
                     FinalPrice = table.Column<decimal>(type: "numeric", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false)
+                    UserID = table.Column<int>(type: "integer", nullable: false),
+                    IsAvailable = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

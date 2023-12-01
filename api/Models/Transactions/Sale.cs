@@ -8,6 +8,7 @@ namespace api.Models.Transactions
         public string CardNumber { get; set; }= string.Empty;
         public string Date { get; set; }= string.Empty;
         public decimal FinalPrice { get; set; }   
-        public int UserID { get; set; }  
+        public int UserID { get; set; } 
+        public string IsAvailable { get; set; }= string.Empty; 
     }
 }

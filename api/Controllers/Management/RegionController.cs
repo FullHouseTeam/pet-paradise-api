@@ -18,13 +18,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet("list", Name = "GetRegions")]
+    [HttpGet(Name = "GetRegions")]
     public async Task<IEnumerable<Region>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("list/id", Name = "GetRegion")]
+    [HttpGet("{id}", Name = "GetRegion")]
     public async Task<ActionResult<Region>> GetById(int id)
     {
         var region = await _service.GetByID(id);
@@ -41,7 +41,7 @@ namespace api.Controllers
         return region;
     }
 
-    [HttpPost("save", Name = "AddRegion")]
+    [HttpPost(Name = "AddRegion")]
     [Authorize]
     public async Task<IActionResult> Create(RegionDTO regionDTO)
     {
@@ -50,7 +50,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newRegion.RegionID }, regionDTO);
     }
 
-    [HttpPut("edit", Name = "EditRegion")]
+    [HttpPut("{id}", Name = "EditRegion")]
     [Authorize]
     public async Task<IActionResult> Update(int id, RegionDTO regionDTO)
     {

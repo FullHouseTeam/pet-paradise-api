@@ -28,6 +28,7 @@ namespace api.Services
     {
       var newRegion = new Region();
       newRegion.RegionID = await GetCount() + 1;
+      newRegion.Name = newRegionDTO.Name;
       newRegion.MunicipalTax = newRegionDTO.MunicipalTax;
       newRegion.StatalTax = newRegionDTO.StatalTax;
 
@@ -43,6 +44,7 @@ namespace api.Services
 
       if (existingRegion is not null)
       {
+      existingRegion.Name = regionDTO.Name;
       existingRegion.MunicipalTax = regionDTO.MunicipalTax;
       existingRegion.StatalTax = regionDTO.StatalTax;
 
