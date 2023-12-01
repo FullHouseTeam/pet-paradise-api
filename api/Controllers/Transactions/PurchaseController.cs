@@ -17,13 +17,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet("list", Name = "GetPurchases")]
+    [HttpGet(Name = "GetPurchases")]
     public async Task<IEnumerable<Purchase>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("list/id", Name = "GetPurchase")]
+    [HttpGet("{id}", Name = "GetPurchase")]
     public async Task<ActionResult<Purchase>> GetById(int id)
     {
         var purchase = await _service.GetByID(id);
@@ -40,7 +40,7 @@ namespace api.Controllers
         return purchase;
     }
 
-    [HttpPost("save", Name = "AddPurchase")]
+    [HttpPost(Name = "AddPurchase")]
     public async Task<IActionResult> Create(PurchaseDTO purchaseDTO)
     {
         var newPurchase = await _service.Create(purchaseDTO);
@@ -48,7 +48,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newPurchase.PurchaseID }, purchaseDTO);
     }
 
-    [HttpPut("edit", Name = "EditPurchase")]
+    [HttpPut("{id}", Name = "EditPurchase")]
     public async Task<IActionResult> Update(int id, PurchaseDTO purchaseDTO)
     {
       if ( id <= 0 )

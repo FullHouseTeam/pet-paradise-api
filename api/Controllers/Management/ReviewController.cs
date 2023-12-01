@@ -17,13 +17,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet("list", Name = "GetReviews")]
+    [HttpGet(Name = "GetReviews")]
     public async Task<IEnumerable<Review>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("list/id", Name = "GetReview")]
+    [HttpGet("{id}", Name = "GetReview")]
     public async Task<ActionResult<Review>> GetById(int id)
     {
         var review = await _service.GetByID(id);
@@ -40,7 +40,7 @@ namespace api.Controllers
         return review;
     }
 
-    [HttpPost("save", Name = "AddReview")]
+    [HttpPost(Name = "AddReview")]
     public async Task<IActionResult> Create(ReviewDTO reviewDTO)
     {
         var newReview = await _service.Create(reviewDTO);
@@ -48,7 +48,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newReview.ReviewID }, reviewDTO);
     }
 
-    [HttpPut("edit", Name = "EditReview")]
+    [HttpPut("{id}", Name = "EditReview")]
     public async Task<IActionResult> Update(int id, ReviewDTO reviewDTO)
     {
       if ( id <= 0 )
@@ -69,7 +69,7 @@ namespace api.Controllers
       }
     }
 
-    [HttpDelete("delete", Name = "DeleteReview")]
+    [HttpDelete(Name = "DeleteReview")]
     public async Task<IActionResult> Delete(int id)
     {
       var existingReview = await _service.GetByID(id);

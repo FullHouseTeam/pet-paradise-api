@@ -41,6 +41,10 @@ namespace api.DTOs.Entities
         [Required("UserID")]
         [IntegerValue("UserID")]
         [PositiveNumber("UserID")]
-        public int UserID { get; set; }  
+        public int UserID { get; set; } 
+
+        [Required("IsAvailable")]
+        [BooleanValue]
+        public string IsAvailable { get; set; }= string.Empty; 
     }
 }

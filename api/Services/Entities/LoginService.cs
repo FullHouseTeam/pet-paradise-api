@@ -1,5 +1,6 @@
 using api.Data;
 using api.DTOs.Entities;
+using api.Models;
 using api.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,16 +27,16 @@ namespace api.Services.Entities
             _context.Administrators.RemoveRange(existingAdmins);
             await _context.SaveChangesAsync();
 
-              var administrator = new Administrator
-            {
-            Name = "admin",
-            Email = "admin@admin.com",
-            AdminType = "administrator",
-            Password = "admin",
-            RegisterDate = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
-            Nit = new Random().Next(100000000, 999999999),
-            PhoneNumber = new Random().Next(100000000, 999999999)
-            };
+            var administrator = new Administrator
+                {
+                    Name = "admin",
+                    Email = "admin@admin.com",
+                    AdminType = "administrator",
+                    Password = "admin",
+                    RegisterDate = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
+                    Nit = 123456789,
+                    PhoneNumber = 987654321
+                };  
 
             _context.Administrators.Add(administrator);
             await _context.SaveChangesAsync();

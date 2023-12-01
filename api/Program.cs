@@ -3,6 +3,7 @@ using api.Data;
 using api.Services;
 using api.Services.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -35,6 +36,11 @@ builder.Services.AddSwaggerGen(c =>
             Array.Empty<string>()
         }
     });
+});
+
+builder.Services.AddControllers(options =>
+{
+    options.Conventions.Add(new LowercaseControllerModelConvention());
 });
 
 //Service DbContext
@@ -94,3 +100,16 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public class LowercaseControllerModelConvention : IControllerModelConvention
+{
+    public void Apply(ControllerModel controller)
+    {
+        controller.ControllerName = controller.ControllerName.ToLower();
+        foreach (var selectorModel in controller.Selectors)
+        {
+            selectorModel.AttributeRouteModel.Template = selectorModel.AttributeRouteModel.Template.ToLower();
+        }
+    }
+}
+

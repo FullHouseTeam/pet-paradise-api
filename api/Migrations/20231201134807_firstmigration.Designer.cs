@@ -2,8 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using api.Data;
 
 #nullable disable
@@ -11,10 +9,9 @@ using api.Data;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231129210238_firstmigration")]
-    partial class firstmigration
+    [Migration("20231201134807_firstmigration")]
+    partial class Firstmigration
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
@@ -58,6 +55,10 @@ namespace api.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("CustomerID"));
 
                     b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("IsAvailable")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -214,6 +215,10 @@ namespace api.Migrations
                     b.Property<decimal>("DeliveryTime")
                         .HasColumnType("numeric");
 
+                    b.Property<string>("IsAvailable")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("LocalQuantity")
                         .HasColumnType("integer");
 
@@ -248,6 +253,10 @@ namespace api.Migrations
 
                     b.Property<decimal>("MunicipalTax")
                         .HasColumnType("numeric");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<decimal>("StatalTax")
                         .HasColumnType("numeric");
@@ -301,6 +310,10 @@ namespace api.Migrations
 
                     b.Property<decimal>("FinalPrice")
                         .HasColumnType("numeric");
+
+                    b.Property<string>("IsAvailable")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("UserID")
                         .HasColumnType("integer");

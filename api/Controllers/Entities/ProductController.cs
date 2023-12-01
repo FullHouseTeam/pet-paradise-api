@@ -18,13 +18,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet("list", Name = "GetProducts")]
+    [HttpGet(Name = "GetProducts")]
     public async Task<IEnumerable<Product>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("list/id", Name = "GetProduct")]
+    [HttpGet("{id}", Name = "GetProduct")]
     public async Task<ActionResult<Product>> GetById(int id)
     {
         var product = await _service.GetByID(id);
@@ -36,7 +36,7 @@ namespace api.Controllers
         return product;
     }
 
-    [HttpPost("save", Name = "AddProduct")]
+    [HttpPost(Name = "AddProduct")]
     [Authorize]
     public async Task<IActionResult> Create(ProductDTO productDTO)
     {
@@ -48,7 +48,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProduct.ProductID }, productDTO);
     }
 
-    [HttpPut("edit", Name = "EditProduct")]
+    [HttpPut("{id}", Name = "EditProduct")]
     [Authorize]
     public async Task<IActionResult> Update(int id, ProductDTO productDTO)
     {

@@ -18,13 +18,13 @@ namespace api.Controllers
         _service = service;
     }
 
-    [HttpGet("list", Name = "GetProviders")]
+    [HttpGet(Name = "GetProviders")]
     public async Task<IEnumerable<Provider>> Get()
     {
         return await _service.GetAll();
     }
 
-    [HttpGet("list/id", Name = "GetProvider")]
+    [HttpGet("{id}", Name = "GetProvider")]
     public async Task<ActionResult<Provider>> GetById(int id)
     {
         var provider = await _service.GetByID(id);
@@ -41,7 +41,7 @@ namespace api.Controllers
         return provider;
     }
 
-    [HttpPost("save", Name = "AddProvider")]
+    [HttpPost(Name = "AddProvider")]
     [Authorize]
     public async Task<IActionResult> Create(ProviderDTO providerDTO)
     {
@@ -53,7 +53,7 @@ namespace api.Controllers
         return CreatedAtAction(nameof(GetById), new { id = newProvider.ProviderID }, providerDTO);
     }
 
-    [HttpPut("edit", Name = "EditProvider")]
+    [HttpPut("{id}", Name = "EditProvider")]
     [Authorize]
     public async Task<IActionResult> Update(int id, ProviderDTO providerDTO)
     {
