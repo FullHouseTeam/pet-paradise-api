@@ -42,7 +42,6 @@ namespace api.Controllers
     }
 
     [HttpPost(Name = "AddCustomer")]
-    [Authorize]
     public async Task<IActionResult> Create(CustomerDTO customerDTO)
     {
         var newCustomer = await _service.Create(customerDTO);
@@ -58,7 +57,6 @@ namespace api.Controllers
     }
 
     [HttpPut("{id}", Name = "EditCustomer")]
-    [Authorize]
     public async Task<IActionResult> Update(int id, CustomerDTO customerDTO)
     {
       if ( id <= 0 )
