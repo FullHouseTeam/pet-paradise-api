@@ -28,7 +28,7 @@ public class NoNumbersAttributeTests
 
         var result = attribute.GetValidationResult(value, validationContext);
 
-        Assert.Equal(new ValidationResult("Error message from ErrorUtilities"), result);
+        Assert.Equal("The (test) field must not contain numbers", result!.ErrorMessage);
     }
 
     [Fact]

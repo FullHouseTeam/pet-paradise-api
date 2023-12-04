@@ -28,7 +28,7 @@ public class NoSpecialCharactersAttributeTests
 
         var result = attribute.GetValidationResult(value, validationContext);
 
-        Assert.Equal(new ValidationResult("Error message from ErrorUtilities"), result);
+        Assert.Equal(attribute.ErrorMessage, result!.ErrorMessage);
     }
 
     [Fact]

@@ -27,7 +27,7 @@ public class OnlyNumbersAttributeTests
 
         var result = attribute.GetValidationResult(value, validationContext);
 
-        Assert.Equal(new ValidationResult(attribute.ErrorMessage), result);
+        Assert.Equal(attribute.ErrorMessage, result!.ErrorMessage);
     }
 
     [Fact]
