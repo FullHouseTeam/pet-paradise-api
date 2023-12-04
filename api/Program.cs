@@ -84,7 +84,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"])),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!)),
             ValidateIssuer = false,
             ValidateAudience = false,
             ValidIssuer = builder.Configuration["JWT:Issuer"],
@@ -125,7 +125,7 @@ public class LowercaseControllerModelConvention : IControllerModelConvention
         controller.ControllerName = controller.ControllerName.ToLower();
         foreach (var selectorModel in controller.Selectors)
         {
-            selectorModel.AttributeRouteModel.Template = selectorModel.AttributeRouteModel.Template.ToLower();
+            selectorModel.AttributeRouteModel!.Template = selectorModel.AttributeRouteModel.Template!.ToLower();
         }
     }
 }

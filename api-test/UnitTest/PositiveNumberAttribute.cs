@@ -46,6 +46,7 @@ namespace UnitTests
         {
             var attribute = new PositiveNumberAttribute("FieldName");
             var validationResult = attribute.GetValidationResult(-5.5, new ValidationContext(new object()));
+
             Assert.NotEqual(ValidationResult.Success, validationResult);
             Assert.Equal("The field FieldName must be a positive number.", validationResult!.ErrorMessage);
         }
