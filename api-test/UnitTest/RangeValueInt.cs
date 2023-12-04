@@ -1,7 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using api.Utilities;
-using Microsoft.AspNetCore.Mvc;
-using Xunit;
 
 namespace UnitTests 
 {
@@ -41,7 +38,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult(0, new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The field must be between 1 and 10.", validationResult.ErrorMessage);
+            Assert.Equal("The field must be between 1 and 10.", validationResult!.ErrorMessage);
         }
 
         [Fact]
@@ -51,7 +48,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult(15, new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The field must be between 1 and 10.", validationResult.ErrorMessage);
+            Assert.Equal("The field must be between 1 and 10.", validationResult!.ErrorMessage);
         }
 
         [Fact]

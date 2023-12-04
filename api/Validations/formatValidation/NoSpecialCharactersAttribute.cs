@@ -13,7 +13,7 @@ public class NoSpecialCharactersAttribute : ValidationAttribute
     {
         if (value != null)
         {
-            string stringValue = value.ToString();
+            string stringValue = value.ToString()!;
             var regex = new Regex("^[a-zA-Z0-9 ]*$");
 
             if (!regex.IsMatch(stringValue))
@@ -21,6 +21,6 @@ public class NoSpecialCharactersAttribute : ValidationAttribute
                 return new ValidationResult(ErrorMessage);
             }
         }
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

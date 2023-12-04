@@ -1,7 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using api.Utilities;
-using Microsoft.AspNetCore.Mvc;
-using Xunit;
 
 namespace UnitTests
 {
@@ -41,7 +38,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult(-5, new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The field FieldName must be a positive number.", validationResult.ErrorMessage);
+            Assert.Equal("The field FieldName must be a positive number.", validationResult!.ErrorMessage);
         }
 
         [Fact]
@@ -49,9 +46,8 @@ namespace UnitTests
         {
             var attribute = new PositiveNumberAttribute("FieldName");
             var validationResult = attribute.GetValidationResult(-5.5, new ValidationContext(new object()));
-
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The field FieldName must be a positive number.", validationResult.ErrorMessage);
+            Assert.Equal("The field FieldName must be a positive number.", validationResult!.ErrorMessage);
         }
 
         [Fact]
@@ -61,7 +57,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult(0, new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The field FieldName must be a positive number.", validationResult.ErrorMessage);
+            Assert.Equal("The field FieldName must be a positive number.", validationResult!.ErrorMessage);
         }
 
         [Fact]

@@ -1,7 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using api.Utilities;
-using Microsoft.AspNetCore.Mvc;
-using Xunit;
 
 namespace UnitTests 
 {
@@ -41,7 +38,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult(0.5, new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The value must be greater than or equal to 1.0 and less than 10.0.", validationResult.ErrorMessage);
+            Assert.Equal("The value must be greater than or equal to 1.0 and less than 10.0.", validationResult!.ErrorMessage);
         }
 
         [Fact]
@@ -51,7 +48,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult(15.0, new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The value must be greater than or equal to 1.0 and less than 10.0.", validationResult.ErrorMessage);
+            Assert.Equal("The value must be greater than or equal to 1.0 and less than 10.0.", validationResult!.ErrorMessage);
         }
 
         [Fact]
@@ -70,7 +67,7 @@ namespace UnitTests
             var validationResult = attribute.GetValidationResult("not a decimal", new ValidationContext(new object()));
 
             Assert.NotEqual(ValidationResult.Success, validationResult);
-            Assert.Equal("The value is not a valid number.", validationResult.ErrorMessage);
+            Assert.Equal("The value is not a valid number.", validationResult!.ErrorMessage);
         }
     }
 }

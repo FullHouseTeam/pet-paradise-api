@@ -26,7 +26,7 @@ namespace api.Utilities
 
         public static string ValidateString(string value) => $"This field needs ({value}) to be a String.";
 
-        public static string ValidateInt(string value) => $"This field needs ({value}) to be a Integer.";
+        public static string ValidateInt(string value) => $"This field needs ({value}) to be an Integer.";
         
         public static string MaxLengthErrorMessage(string value, int quantity) => $"The ({value}) field cannot exceed ({quantity}) characters.";
 

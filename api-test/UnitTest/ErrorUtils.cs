@@ -94,7 +94,10 @@ namespace UnitTests
             var errorUtilities = ErrorUtilities.FieldNotFound("Name", 300);
             var notFound = new NotFoundObjectResult(new { message = $"The Name with ID = 300 doesn't exist." });
 
-            Assert.Equal(notFound.Value, errorUtilities.Value); // Compare the values, not the instances
+            string errorUtilitiesString = errorUtilities.Value?.ToString() ?? "Value is null";
+            string notFoundString = notFound.Value?.ToString() ?? "Value is null";
+
+            Assert.Equal(notFoundString, errorUtilitiesString);
         }
 
         [Fact]
@@ -103,7 +106,10 @@ namespace UnitTests
             var errorUtilities = ErrorUtilities.IdPositive(-5);
             var notFound = new NotFoundObjectResult(new { message = $"ID = -5 must be a positive value greater than 0." });
 
-            Assert.Equal(notFound.Value, errorUtilities.Value); // Compare the values, not the instances
+            string errorUtilitiesString = errorUtilities.Value?.ToString() ?? "Value is null";
+            string notFoundString = notFound.Value?.ToString() ?? "Value is null";
+
+            Assert.Equal(notFoundString, errorUtilitiesString);
         }
 
         [Fact]
@@ -112,7 +118,10 @@ namespace UnitTests
             var errorUtilities = ErrorUtilities.UniqueName("Julian");
             var notFound = new NotFoundObjectResult(new { message = $"The Julian name already exists. Provide a unique name." });
 
-            Assert.Equal(notFound.Value, errorUtilities.Value); // Compare the values, not the instances
+            string errorUtilitiesString = errorUtilities.Value?.ToString() ?? "Value is null";
+            string notFoundString = notFound.Value?.ToString() ?? "Value is null";
+
+            Assert.Equal(notFoundString, errorUtilitiesString); 
         }
 
         [Fact]
@@ -120,8 +129,11 @@ namespace UnitTests
         {
             var errorUtilities = ErrorUtilities.EmailName("manuel@gmail.com");
             var notFound = new NotFoundObjectResult(new { message = $"The manuel@gmail.com email already exists. Provide a unique email." });
+            
+            string errorUtilitiesString = errorUtilities.Value?.ToString() ?? "Value is null";
+            string notFoundString = notFound.Value?.ToString() ?? "Value is null";
 
-            Assert.Equal(notFound.Value, errorUtilities.Value); // Compare the values, not the instances
+            Assert.Equal(errorUtilitiesString, notFoundString);
         }
     }
 }

@@ -15,13 +15,12 @@ public class MaxLengthCharacters : ValidationAttribute
     {
         if (value != null)
         {
-            string stringValue = value.ToString();
+            string stringValue = value.ToString()!;
             if (stringValue.Length > _maxLength)
             {
                 return new ValidationResult(ErrorMessage);
             }
         }
-
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }
