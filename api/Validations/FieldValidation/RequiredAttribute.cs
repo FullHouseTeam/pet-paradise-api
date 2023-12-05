@@ -8,13 +8,13 @@ public class RequiredAttribute : ValidationAttribute
         ErrorMessage = ErrorUtilities.IsRequired(value);
     }
     
-    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
         if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
         {
             return new ValidationResult(ErrorMessage);
         }
 
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

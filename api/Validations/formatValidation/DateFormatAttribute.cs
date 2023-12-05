@@ -13,7 +13,7 @@ public class DateFormatAttribute : ValidationAttribute
     {
         if (value != null)
         {
-            string dateStr = value.ToString();
+            string dateStr = value.ToString()!;
             var regex = new Regex(@"^(0[1-9]|1[0-2])/\d{4}$");
 
             if (!regex.IsMatch(dateStr))
@@ -22,6 +22,6 @@ public class DateFormatAttribute : ValidationAttribute
             }
         }
 
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

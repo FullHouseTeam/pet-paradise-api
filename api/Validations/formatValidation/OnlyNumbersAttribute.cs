@@ -12,13 +12,13 @@ public class OnlyNumbersAttribute : ValidationAttribute
     {
         if (value != null)
         {
-            string input = value.ToString();
+            string input = value.ToString()!;
             var regex = new Regex("^[0-9]*$");
             if (!regex.IsMatch(input))
             {
                 return new ValidationResult(ErrorMessage);
             }
         }
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

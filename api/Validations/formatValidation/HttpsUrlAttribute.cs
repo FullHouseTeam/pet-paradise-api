@@ -6,7 +6,7 @@ public class HttpsUrlAttribute : ValidationAttribute
     {
         if (value is not null)
         {
-            string url = value.ToString();
+            string url = value.ToString()!;
 
             if (url.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
             {

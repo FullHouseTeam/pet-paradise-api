@@ -7,11 +7,11 @@ public class PositiveNumberAttribute : ValidationAttribute
     {
         ErrorMessage = ErrorUtilities.PositiveNumber(value);
     }
-    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    protected override ValidationResult IsValid(object? value, ValidationContext validationContext)
     {
         if (value == null)
         {
-            return ValidationResult.Success; // Puedes decidir si un valor nulo es válido o no
+            return ValidationResult.Success!;
         }
 
         if (value is IComparable comparableValue && comparableValue.CompareTo(0) < 1)
@@ -19,6 +19,6 @@ public class PositiveNumberAttribute : ValidationAttribute
             return new ValidationResult(ErrorMessage);
         }
 
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

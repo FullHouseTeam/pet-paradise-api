@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using api.Data;
 using api.Services;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +16,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "E-COMMERCE FULL HOUSE", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo 
+    { 
+        Title = "E-COMMERCE FULL HOUSE", 
+        Description = "The Full House Commerce API is a RESTful API that allows you to manage the Full House Commerce app's products, brands, customers, products, suppliers, purchases, regions, reviews, sales, and login.", 
+        Version = "v1",
+        Contact = new OpenApiContact
+        {
+            Name = "Full House",
+            Url = new Uri("https://test-pet-paradise-store.vercel.app/")
+        },
+        License = new OpenApiLicense
+        {
+            Name = "About us",
+            Url = new Uri("https://test-pet-paradise-store.vercel.app/about")
+        }
+    });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme",
@@ -40,7 +57,7 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddControllers(options =>
 {
-    options.Conventions.Add(new LowercaseControllerModelConvention());
+   options.Conventions.Add(new LowercaseControllerModelConvention());
 });
 
 //Service DbContext
@@ -67,7 +84,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"])),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!)),
             ValidateIssuer = false,
             ValidateAudience = false,
             ValidIssuer = builder.Configuration["JWT:Issuer"],
@@ -108,8 +125,9 @@ public class LowercaseControllerModelConvention : IControllerModelConvention
         controller.ControllerName = controller.ControllerName.ToLower();
         foreach (var selectorModel in controller.Selectors)
         {
-            selectorModel.AttributeRouteModel.Template = selectorModel.AttributeRouteModel.Template.ToLower();
+            selectorModel.AttributeRouteModel!.Template = selectorModel.AttributeRouteModel.Template!.ToLower();
         }
     }
 }
+
 

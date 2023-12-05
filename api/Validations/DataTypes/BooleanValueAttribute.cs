@@ -6,7 +6,7 @@ public class BooleanValueAttribute : ValidationAttribute
     {
         if (value is not null)
         {
-            string stringValue = value.ToString();
+            string stringValue = value.ToString()!;
 
             if (bool.TryParse(stringValue, out bool result))
             {

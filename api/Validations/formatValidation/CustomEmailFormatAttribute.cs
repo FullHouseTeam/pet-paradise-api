@@ -12,13 +12,13 @@ public class CustomEmailFormatAttribute : ValidationAttribute
     {
         if (value != null)
         {
-            string email = value.ToString();
+            string email = value.ToString()!;
             var regex = new Regex(@"^[a-zA-Z0-9._%+-]+@gmail\.com$");
             if (!regex.IsMatch(email))
             {
                 return new ValidationResult(ErrorMessage);
             }
         }
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

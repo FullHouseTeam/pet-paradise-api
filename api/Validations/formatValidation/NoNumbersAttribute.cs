@@ -13,7 +13,7 @@ public class NoNumbersAttribute : ValidationAttribute
     {
         if (value != null)
         {
-            string stringValue = value.ToString();
+            string stringValue = value.ToString()!;
             var regex = new Regex("^[a-zA-Z ]*$");
 
             if (!regex.IsMatch(stringValue))
@@ -21,6 +21,6 @@ public class NoNumbersAttribute : ValidationAttribute
                 return new ValidationResult(ErrorMessage);
             }
         }
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

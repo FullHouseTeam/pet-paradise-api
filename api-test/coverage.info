@@ -1,0 +1,3421 @@
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Program.cs
+FN:12,System.Void Program::<Main>$(System.String[])
+FNDA:0,System.Void Program::<Main>$(System.String[])
+DA:13,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:79,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:105,0
+DA:107,0
+DA:108,0
+DA:110,0
+DA:112,0
+DA:114,0
+DA:115,0
+DA:117,0
+DA:119,0
+FN:123,System.Void LowercaseControllerModelConvention::Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)
+FNDA:0,System.Void LowercaseControllerModelConvention::Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+BRDA:126,77,1,0
+BRDA:126,77,0,0
+LF:98
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/DataTypes/BooleanValueAttribute.cs
+FN:5,System.ComponentModel.DataAnnotations.ValidationResult BooleanValueAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult BooleanValueAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:16,0
+DA:17,0
+DA:21,0
+DA:22,0
+BRDA:7,7,0,0
+BRDA:11,27,0,0
+BRDA:11,27,1,0
+BRDA:17,47,0,0
+BRDA:17,47,1,0
+BRDA:7,7,1,0
+LF:11
+LH:0
+BRF:6
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/DataTypes/DecimalValue.cs
+FN:5,System.ComponentModel.DataAnnotations.ValidationResult DecimalValue::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult DecimalValue::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:14,0
+DA:15,0
+DA:19,0
+DA:20,0
+BRDA:7,7,0,0
+BRDA:9,25,0,0
+BRDA:9,25,1,0
+BRDA:15,44,0,0
+BRDA:15,44,1,0
+BRDA:7,7,1,0
+LF:10
+LH:0
+BRF:6
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/DataTypes/IntegerValue.cs
+FN:10,System.ComponentModel.DataAnnotations.ValidationResult IntegerValue::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult IntegerValue::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:19,0
+DA:20,0
+DA:23,0
+DA:24,0
+BRDA:12,7,0,0
+BRDA:14,25,0,0
+BRDA:14,25,1,0
+BRDA:12,7,1,0
+FN:5,System.Void IntegerValue::.ctor(System.String)
+FNDA:0,System.Void IntegerValue::.ctor(System.String)
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+LF:14
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/DataTypes/StringValue.cs
+FN:11,System.ComponentModel.DataAnnotations.ValidationResult StringValue::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult StringValue::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:18,0
+DA:19,0
+BRDA:13,2,0,0
+BRDA:13,2,1,0
+BRDA:13,21,0,0
+BRDA:13,21,1,0
+FN:5,System.Void StringValue::.ctor(System.String)
+FNDA:0,System.Void StringValue::.ctor(System.String)
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+LF:10
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/FieldValidation/RequiredAttribute.cs
+FN:11,System.ComponentModel.DataAnnotations.ValidationResult RequiredAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult RequiredAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:18,0
+DA:19,0
+BRDA:13,2,0,0
+BRDA:13,2,1,0
+BRDA:13,20,0,0
+BRDA:13,20,1,0
+FN:5,System.Void RequiredAttribute::.ctor(System.String)
+FNDA:0,System.Void RequiredAttribute::.ctor(System.String)
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+LF:10
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/CreditCardFormatAttribute.cs
+FN:11,System.ComponentModel.DataAnnotations.ValidationResult CreditCardFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult CreditCardFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:24,0
+DA:25,0
+BRDA:13,7,0,0
+BRDA:18,40,0,0
+BRDA:18,40,1,0
+BRDA:13,7,1,0
+FN:5,System.Void CreditCardFormatAttribute::.ctor()
+FNDA:0,System.Void CreditCardFormatAttribute::.ctor()
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+LF:15
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/CustomEmailFormatAttribute.cs
+FN:11,System.ComponentModel.DataAnnotations.ValidationResult CustomEmailFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult CustomEmailFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+BRDA:13,7,0,0
+BRDA:17,40,0,0
+BRDA:17,40,1,0
+BRDA:13,7,1,0
+FN:5,System.Void CustomEmailFormatAttribute::.ctor()
+FNDA:0,System.Void CustomEmailFormatAttribute::.ctor()
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+LF:15
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/DateFormatAttribute.cs
+FN:12,System.ComponentModel.DataAnnotations.ValidationResult DateFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult DateFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:25,0
+DA:26,0
+BRDA:14,7,0,0
+BRDA:19,40,0,0
+BRDA:19,40,1,0
+BRDA:14,7,1,0
+FN:6,System.Void DateFormatAttribute::.ctor()
+FNDA:0,System.Void DateFormatAttribute::.ctor()
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+LF:15
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/HttpsUrlAttribute.cs
+FN:5,System.ComponentModel.DataAnnotations.ValidationResult HttpsUrlAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult HttpsUrlAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:6,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:16,0
+DA:17,0
+DA:20,0
+DA:21,0
+BRDA:7,7,0,0
+BRDA:11,31,0,0
+BRDA:11,31,1,0
+BRDA:17,50,0,0
+BRDA:17,50,1,0
+BRDA:7,7,1,0
+LF:11
+LH:0
+BRF:6
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/NoNumbersAttribute.cs
+FN:12,System.ComponentModel.DataAnnotations.ValidationResult NoNumbersAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:7,System.ComponentModel.DataAnnotations.ValidationResult NoNumbersAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:13,7
+DA:14,7
+DA:15,6
+DA:16,6
+DA:17,6
+DA:19,6
+DA:20,3
+DA:21,3
+DA:23,3
+DA:24,4
+DA:25,7
+BRDA:14,7,0,6
+BRDA:19,40,0,3
+BRDA:19,40,1,3
+BRDA:14,7,1,4
+FN:6,System.Void NoNumbersAttribute::.ctor(System.String)
+FNDA:7,System.Void NoNumbersAttribute::.ctor(System.String)
+DA:7,7
+DA:8,7
+DA:9,7
+DA:10,7
+LF:15
+LH:15
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/NoSpecialCharactersAttribute.cs
+FN:12,System.ComponentModel.DataAnnotations.ValidationResult NoSpecialCharactersAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:7,System.ComponentModel.DataAnnotations.ValidationResult NoSpecialCharactersAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:13,7
+DA:14,7
+DA:15,6
+DA:16,6
+DA:17,6
+DA:19,6
+DA:20,3
+DA:21,3
+DA:23,3
+DA:24,4
+DA:25,7
+BRDA:14,7,0,6
+BRDA:19,40,0,3
+BRDA:19,40,1,3
+BRDA:14,7,1,4
+FN:6,System.Void NoSpecialCharactersAttribute::.ctor(System.String)
+FNDA:7,System.Void NoSpecialCharactersAttribute::.ctor(System.String)
+DA:7,7
+DA:8,7
+DA:9,7
+DA:10,7
+LF:15
+LH:15
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/OnlyNumbersAttribute.cs
+FN:11,System.ComponentModel.DataAnnotations.ValidationResult OnlyNumbersAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:6,System.ComponentModel.DataAnnotations.ValidationResult OnlyNumbersAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:12,6
+DA:13,6
+DA:14,5
+DA:15,5
+DA:16,5
+DA:17,5
+DA:18,3
+DA:19,3
+DA:21,2
+DA:22,3
+DA:23,6
+BRDA:13,7,0,5
+BRDA:17,40,0,3
+BRDA:17,40,1,2
+BRDA:13,7,1,3
+FN:5,System.Void OnlyNumbersAttribute::.ctor()
+FNDA:6,System.Void OnlyNumbersAttribute::.ctor()
+DA:6,6
+DA:7,6
+DA:8,6
+DA:9,6
+LF:15
+LH:15
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/formatValidation/PasswordFormatAttribute.cs
+FN:12,System.ComponentModel.DataAnnotations.ValidationResult PasswordFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:7,System.ComponentModel.DataAnnotations.ValidationResult PasswordFormatAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:13,7
+DA:14,7
+DA:15,6
+DA:16,6
+DA:17,6
+DA:19,6
+DA:20,4
+DA:21,4
+DA:23,2
+DA:25,3
+DA:26,7
+BRDA:14,7,0,6
+BRDA:19,40,0,4
+BRDA:19,40,1,2
+BRDA:14,7,1,3
+FN:6,System.Void PasswordFormatAttribute::.ctor()
+FNDA:7,System.Void PasswordFormatAttribute::.ctor()
+DA:7,7
+DA:8,7
+DA:9,7
+DA:10,7
+LF:15
+LH:15
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/rangeValidation/MaxLengthCharacters.cs
+FN:14,System.ComponentModel.DataAnnotations.ValidationResult MaxLengthCharacters::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:5,System.ComponentModel.DataAnnotations.ValidationResult MaxLengthCharacters::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:15,5
+DA:16,5
+DA:17,4
+DA:18,4
+DA:19,4
+DA:20,2
+DA:21,2
+DA:23,2
+DA:24,3
+DA:25,5
+BRDA:16,7,0,4
+BRDA:19,33,0,2
+BRDA:19,33,1,2
+BRDA:16,7,1,3
+FN:7,System.Void MaxLengthCharacters::.ctor(System.String,System.Int32)
+FNDA:5,System.Void MaxLengthCharacters::.ctor(System.String,System.Int32)
+DA:8,5
+DA:9,5
+DA:10,5
+DA:11,5
+DA:12,5
+LF:15
+LH:15
+BRF:4
+BRH:4
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/rangeValidation/PositiveNumberAttribute.cs
+FN:10,System.ComponentModel.DataAnnotations.ValidationResult PositiveNumberAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:5,System.ComponentModel.DataAnnotations.ValidationResult PositiveNumberAttribute::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:11,5
+DA:12,5
+DA:13,1
+DA:14,1
+DA:17,4
+DA:18,3
+DA:19,3
+DA:22,1
+DA:23,5
+BRDA:12,7,0,1
+BRDA:12,7,1,4
+BRDA:17,26,0,4
+BRDA:17,26,1,0
+BRDA:17,48,0,3
+BRDA:17,48,1,1
+FN:5,System.Void PositiveNumberAttribute::.ctor(System.String)
+FNDA:5,System.Void PositiveNumberAttribute::.ctor(System.String)
+DA:6,5
+DA:7,5
+DA:8,5
+DA:9,5
+LF:13
+LH:13
+BRF:6
+BRH:5
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/rangeValidation/RangeValueDecimal.cs
+FN:15,System.ComponentModel.DataAnnotations.ValidationResult RangeValueDecimal::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:7,System.ComponentModel.DataAnnotations.ValidationResult RangeValueDecimal::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:16,7
+DA:17,7
+DA:18,6
+DA:19,6
+DA:20,5
+DA:21,5
+DA:22,3
+DA:23,3
+DA:25,2
+DA:27,1
+DA:28,1
+DA:30,2
+DA:31,3
+DA:32,7
+BRDA:17,7,0,6
+BRDA:19,25,0,5
+BRDA:21,35,0,4
+BRDA:21,35,1,1
+BRDA:21,54,0,3
+BRDA:21,54,1,2
+BRDA:19,25,1,1
+BRDA:17,7,1,3
+FN:7,System.Void RangeValueDecimal::.ctor(System.Double,System.Double)
+FNDA:7,System.Void RangeValueDecimal::.ctor(System.Double,System.Double)
+DA:8,7
+DA:9,7
+DA:10,7
+DA:11,7
+DA:12,7
+DA:13,7
+LF:20
+LH:20
+BRF:8
+BRH:8
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/rangeValidation/RangeValueInt.cs
+FN:16,System.ComponentModel.DataAnnotations.ValidationResult RangeValueInt::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:7,System.ComponentModel.DataAnnotations.ValidationResult RangeValueInt::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:17,7
+DA:18,7
+DA:19,5
+DA:20,5
+DA:21,2
+DA:22,2
+DA:24,3
+DA:25,5
+DA:26,7
+BRDA:18,2,0,6
+BRDA:18,10,0,5
+BRDA:18,10,1,1
+BRDA:18,2,1,1
+BRDA:18,28,0,5
+BRDA:20,38,0,4
+BRDA:20,38,1,1
+BRDA:20,54,0,2
+BRDA:20,54,1,3
+BRDA:18,28,1,5
+FN:8,System.Void RangeValueInt::.ctor(System.Int32,System.Int32)
+FNDA:7,System.Void RangeValueInt::.ctor(System.Int32,System.Int32)
+DA:9,7
+DA:10,7
+DA:11,7
+DA:12,7
+DA:13,7
+DA:14,7
+LF:15
+LH:15
+BRF:10
+BRH:10
+FNF:2
+FNH:2
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/WeatherForecast.cs
+FN:4,System.DateOnly api.WeatherForecast::get_Date()
+FNDA:0,System.DateOnly api.WeatherForecast::get_Date()
+DA:5,0
+FN:6,System.Int32 api.WeatherForecast::get_TemperatureC()
+FNDA:0,System.Int32 api.WeatherForecast::get_TemperatureC()
+DA:7,0
+FN:8,System.Int32 api.WeatherForecast::get_TemperatureF()
+FNDA:0,System.Int32 api.WeatherForecast::get_TemperatureF()
+DA:9,0
+FN:10,System.String api.WeatherForecast::get_Summary()
+FNDA:0,System.String api.WeatherForecast::get_Summary()
+DA:11,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/ErrorUtilities.cs
+FN:7,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::FieldNotFound(System.String,System.Int32)
+FNDA:1,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::FieldNotFound(System.String,System.Int32)
+DA:8,1
+DA:9,1
+DA:10,1
+FN:12,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::IdPositive(System.Int32)
+FNDA:1,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::IdPositive(System.Int32)
+DA:13,1
+DA:14,1
+DA:15,1
+FN:17,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::UniqueName(System.String)
+FNDA:1,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::UniqueName(System.String)
+DA:18,1
+DA:19,1
+DA:20,1
+FN:22,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::EmailName(System.String)
+FNDA:1,Microsoft.AspNetCore.Mvc.NotFoundObjectResult api.Utilities.ErrorUtilities::EmailName(System.String)
+DA:23,1
+DA:24,1
+DA:25,1
+FN:26,System.String api.Utilities.ErrorUtilities::ValidateString(System.String)
+FNDA:1,System.String api.Utilities.ErrorUtilities::ValidateString(System.String)
+DA:27,1
+FN:28,System.String api.Utilities.ErrorUtilities::ValidateInt(System.String)
+FNDA:1,System.String api.Utilities.ErrorUtilities::ValidateInt(System.String)
+DA:29,1
+FN:30,System.String api.Utilities.ErrorUtilities::MaxLengthErrorMessage(System.String,System.Int32)
+FNDA:6,System.String api.Utilities.ErrorUtilities::MaxLengthErrorMessage(System.String,System.Int32)
+DA:31,6
+FN:32,System.String api.Utilities.ErrorUtilities::RangeValueErrorMessageInt(System.Int32,System.Int32)
+FNDA:8,System.String api.Utilities.ErrorUtilities::RangeValueErrorMessageInt(System.Int32,System.Int32)
+DA:33,8
+FN:34,System.String api.Utilities.ErrorUtilities::RangeValueErrorMessageDecimal(System.Double,System.Double)
+FNDA:8,System.String api.Utilities.ErrorUtilities::RangeValueErrorMessageDecimal(System.Double,System.Double)
+DA:35,8
+FN:36,System.String api.Utilities.ErrorUtilities::PositiveNumber(System.String)
+FNDA:6,System.String api.Utilities.ErrorUtilities::PositiveNumber(System.String)
+DA:37,6
+FN:38,System.String api.Utilities.ErrorUtilities::IsRequired(System.String)
+FNDA:1,System.String api.Utilities.ErrorUtilities::IsRequired(System.String)
+DA:39,1
+FN:40,System.String api.Utilities.ErrorUtilities::NoSpecialCharacters(System.String)
+FNDA:8,System.String api.Utilities.ErrorUtilities::NoSpecialCharacters(System.String)
+DA:41,8
+FN:42,System.String api.Utilities.ErrorUtilities::NoSpecialNumbers(System.String)
+FNDA:8,System.String api.Utilities.ErrorUtilities::NoSpecialNumbers(System.String)
+DA:43,8
+LF:21
+LH:21
+BRF:0
+BRH:0
+FNF:13
+FNH:13
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Entities/BrandService.cs
+FN:13,System.Void api.Services.BrandService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.BrandService::.ctor(api.Data.DataContext)
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+FN:90,System.Boolean api.Services.BrandService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Brand)
+FNDA:0,System.Boolean api.Services.BrandService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Brand)
+DA:91,0
+FN:29,System.Void api.Services.BrandService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<Create>d__4::MoveNext()
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:52,0
+BRDA:31,166,0,0
+BRDA:31,166,1,0
+BRDA:42,430,0,0
+BRDA:42,430,1,0
+FN:72,System.Void api.Services.BrandService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<Delete>d__6::MoveNext()
+DA:73,0
+DA:74,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+BRDA:76,168,0,0
+BRDA:76,168,1,0
+FN:19,System.Void api.Services.BrandService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<GetAll>d__2::MoveNext()
+DA:20,0
+DA:21,0
+DA:22,0
+FN:24,System.Void api.Services.BrandService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<GetByID>d__3::MoveNext()
+DA:25,0
+DA:26,0
+DA:27,0
+FN:83,System.Void api.Services.BrandService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<GetCount>d__7::MoveNext()
+DA:84,0
+DA:85,0
+DA:86,0
+FN:88,System.Void api.Services.BrandService/<IsBrandNameUnique>d__8::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<IsBrandNameUnique>d__8::MoveNext()
+DA:89,0
+DA:90,0
+DA:92,0
+FN:54,System.Void api.Services.BrandService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.BrandService/<Update>d__5::MoveNext()
+DA:55,0
+DA:56,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:68,0
+DA:69,0
+DA:70,0
+BRDA:58,168,0,0
+BRDA:62,235,0,0
+BRDA:62,235,1,0
+BRDA:58,168,1,0
+LF:58
+LH:0
+BRF:10
+BRH:0
+FNF:9
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Entities/CustomerService.cs
+FN:11,System.Void api.Services.CustomerService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.CustomerService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:101,System.Boolean api.Services.CustomerService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Customer)
+FNDA:0,System.Boolean api.Services.CustomerService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Customer)
+DA:102,0
+FN:107,System.Boolean api.Services.CustomerService/<>c__DisplayClass9_0::<IsEmailUnique>b__0(api.Models.Customer)
+FNDA:0,System.Boolean api.Services.CustomerService/<>c__DisplayClass9_0::<IsEmailUnique>b__0(api.Models.Customer)
+DA:108,0
+FN:27,System.Void api.Services.CustomerService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+BRDA:29,175,0,0
+BRDA:29,175,1,0
+BRDA:36,349,0,0
+BRDA:36,349,1,0
+BRDA:50,682,0,0
+BRDA:50,682,1,0
+FN:83,System.Void api.Services.CustomerService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<Delete>d__6::MoveNext()
+DA:84,0
+DA:85,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+BRDA:87,168,0,0
+BRDA:87,168,1,0
+FN:17,System.Void api.Services.CustomerService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.CustomerService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:94,System.Void api.Services.CustomerService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<GetCount>d__7::MoveNext()
+DA:95,0
+DA:96,0
+DA:97,0
+FN:99,System.Void api.Services.CustomerService/<IsBrandNameUnique>d__8::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<IsBrandNameUnique>d__8::MoveNext()
+DA:100,0
+DA:101,0
+DA:103,0
+FN:105,System.Void api.Services.CustomerService/<IsEmailUnique>d__9::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<IsEmailUnique>d__9::MoveNext()
+DA:106,0
+DA:107,0
+DA:109,0
+FN:62,System.Void api.Services.CustomerService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.CustomerService/<Update>d__5::MoveNext()
+DA:63,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:79,0
+DA:80,0
+DA:81,0
+BRDA:66,168,0,0
+BRDA:73,304,0,0
+BRDA:73,304,1,0
+BRDA:66,168,1,0
+LF:73
+LH:0
+BRF:12
+BRH:0
+FNF:11
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Entities/ProductService.cs
+FN:11,System.Void api.Services.ProductService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.ProductService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:117,System.Boolean api.Services.ProductService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Product)
+FNDA:0,System.Boolean api.Services.ProductService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Product)
+DA:118,0
+FN:27,System.Void api.Services.ProductService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:61,0
+DA:62,0
+DA:64,0
+DA:65,0
+BRDA:29,166,0,0
+BRDA:29,166,1,0
+BRDA:49,614,0,0
+BRDA:49,614,1,0
+BRDA:55,671,0,0
+BRDA:55,671,1,0
+FN:99,System.Void api.Services.ProductService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<Delete>d__6::MoveNext()
+DA:100,0
+DA:101,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+BRDA:103,168,0,0
+BRDA:103,168,1,0
+FN:17,System.Void api.Services.ProductService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.ProductService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:110,System.Void api.Services.ProductService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<GetCount>d__7::MoveNext()
+DA:111,0
+DA:112,0
+DA:113,0
+FN:115,System.Void api.Services.ProductService/<IsBrandNameUnique>d__8::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<IsBrandNameUnique>d__8::MoveNext()
+DA:116,0
+DA:117,0
+DA:119,0
+FN:67,System.Void api.Services.ProductService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.ProductService/<Update>d__5::MoveNext()
+DA:68,0
+DA:69,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:95,0
+DA:96,0
+DA:97,0
+BRDA:71,168,0,0
+BRDA:83,396,0,0
+BRDA:83,396,1,0
+BRDA:89,453,0,0
+BRDA:89,453,1,0
+BRDA:71,168,1,0
+LF:83
+LH:0
+BRF:14
+BRH:0
+FNF:9
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Entities/ProviderService.cs
+FN:11,System.Void api.Services.ProviderService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.ProviderService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:89,System.Boolean api.Services.ProviderService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Provider)
+FNDA:0,System.Boolean api.Services.ProviderService/<>c__DisplayClass8_0::<IsBrandNameUnique>b__0(api.Models.Provider)
+DA:90,0
+FN:27,System.Void api.Services.ProviderService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+BRDA:29,166,0,0
+BRDA:29,166,1,0
+BRDA:40,430,0,0
+BRDA:40,430,1,0
+FN:71,System.Void api.Services.ProviderService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<Delete>d__6::MoveNext()
+DA:72,0
+DA:73,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+BRDA:75,168,0,0
+BRDA:75,168,1,0
+FN:17,System.Void api.Services.ProviderService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.ProviderService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:82,System.Void api.Services.ProviderService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<GetCount>d__7::MoveNext()
+DA:83,0
+DA:84,0
+DA:85,0
+FN:87,System.Void api.Services.ProviderService/<IsBrandNameUnique>d__8::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<IsBrandNameUnique>d__8::MoveNext()
+DA:88,0
+DA:89,0
+DA:91,0
+FN:53,System.Void api.Services.ProviderService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.ProviderService/<Update>d__5::MoveNext()
+DA:54,0
+DA:55,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:67,0
+DA:68,0
+DA:69,0
+BRDA:57,168,0,0
+BRDA:61,235,0,0
+BRDA:61,235,1,0
+BRDA:57,168,1,0
+LF:58
+LH:0
+BRF:10
+BRH:0
+FNF:9
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Management/RegionService.cs
+FN:11,System.Void api.Services.RegionService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.RegionService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:27,System.Void api.Services.RegionService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.RegionService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+FN:55,System.Void api.Services.RegionService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.RegionService/<Delete>d__6::MoveNext()
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+BRDA:59,168,0,0
+BRDA:59,168,1,0
+FN:17,System.Void api.Services.RegionService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.RegionService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.RegionService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.RegionService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:66,System.Void api.Services.RegionService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.RegionService/<GetCount>d__7::MoveNext()
+DA:67,0
+DA:68,0
+DA:69,0
+FN:41,System.Void api.Services.RegionService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.RegionService/<Update>d__5::MoveNext()
+DA:42,0
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:52,0
+DA:53,0
+BRDA:45,168,0,0
+BRDA:45,168,1,0
+LF:41
+LH:0
+BRF:4
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Management/ReviewService.cs
+FN:11,System.Void api.Services.ReviewService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.ReviewService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:27,System.Void api.Services.ReviewService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.ReviewService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+FN:55,System.Void api.Services.ReviewService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.ReviewService/<Delete>d__6::MoveNext()
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+BRDA:59,168,0,0
+BRDA:59,168,1,0
+FN:17,System.Void api.Services.ReviewService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.ReviewService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.ReviewService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.ReviewService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:66,System.Void api.Services.ReviewService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.ReviewService/<GetCount>d__7::MoveNext()
+DA:67,0
+DA:68,0
+DA:69,0
+FN:41,System.Void api.Services.ReviewService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.ReviewService/<Update>d__5::MoveNext()
+DA:42,0
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:52,0
+DA:53,0
+BRDA:45,168,0,0
+BRDA:45,168,1,0
+LF:41
+LH:0
+BRF:4
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Transactions/PurchaseService.cs
+FN:11,System.Void api.Services.PurchaseService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.PurchaseService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:27,System.Void api.Services.PurchaseService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.PurchaseService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+BRDA:39,390,0,0
+BRDA:39,390,1,0
+FN:73,System.Void api.Services.PurchaseService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.PurchaseService/<Delete>d__6::MoveNext()
+DA:74,0
+DA:75,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+BRDA:77,168,0,0
+BRDA:77,168,1,0
+FN:17,System.Void api.Services.PurchaseService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.PurchaseService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.PurchaseService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.PurchaseService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:84,System.Void api.Services.PurchaseService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.PurchaseService/<GetCount>d__7::MoveNext()
+DA:85,0
+DA:86,0
+DA:87,0
+FN:51,System.Void api.Services.PurchaseService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.PurchaseService/<Update>d__5::MoveNext()
+DA:52,0
+DA:53,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:69,0
+DA:70,0
+DA:71,0
+BRDA:55,168,0,0
+BRDA:63,327,0,0
+BRDA:63,327,1,0
+BRDA:55,168,1,0
+LF:59
+LH:0
+BRF:8
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Transactions/SaleService.cs
+FN:11,System.Void api.Services.SaleService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.SaleService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+FN:27,System.Void api.Services.SaleService/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Services.SaleService/<Create>d__4::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+FN:63,System.Void api.Services.SaleService/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Services.SaleService/<Delete>d__6::MoveNext()
+DA:64,0
+DA:65,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+BRDA:67,168,0,0
+BRDA:67,168,1,0
+FN:17,System.Void api.Services.SaleService/<GetAll>d__2::MoveNext()
+FNDA:0,System.Void api.Services.SaleService/<GetAll>d__2::MoveNext()
+DA:18,0
+DA:19,0
+DA:20,0
+FN:22,System.Void api.Services.SaleService/<GetByID>d__3::MoveNext()
+FNDA:0,System.Void api.Services.SaleService/<GetByID>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:74,System.Void api.Services.SaleService/<GetCount>d__7::MoveNext()
+FNDA:0,System.Void api.Services.SaleService/<GetCount>d__7::MoveNext()
+DA:75,0
+DA:76,0
+DA:77,0
+FN:45,System.Void api.Services.SaleService/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Services.SaleService/<Update>d__5::MoveNext()
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+BRDA:49,168,0,0
+BRDA:49,168,1,0
+LF:49
+LH:0
+BRF:4
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Services/Entities/LoginService.cs
+FN:11,System.Void api.Services.Entities.LoginService::.ctor(api.Data.DataContext)
+FNDA:0,System.Void api.Services.Entities.LoginService::.ctor(api.Data.DataContext)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+FN:18,System.Void api.Services.Entities.LoginService/<GetAdmin>d__2::MoveNext()
+FNDA:0,System.Void api.Services.Entities.LoginService/<GetAdmin>d__2::MoveNext()
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+FN:24,System.Void api.Services.Entities.LoginService/<InitializeAdminAsync>d__3::MoveNext()
+FNDA:0,System.Void api.Services.Entities.LoginService/<InitializeAdminAsync>d__3::MoveNext()
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:43,0
+LF:26
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Entities/Brand.cs
+FN:4,System.Int32 api.Models.Brand::get_BrandID()
+FNDA:0,System.Int32 api.Models.Brand::get_BrandID()
+DA:5,0
+FN:5,System.String api.Models.Brand::get_Name()
+FNDA:0,System.String api.Models.Brand::get_Name()
+DA:6,0
+FN:6,System.String api.Models.Brand::get_Logo()
+FNDA:0,System.String api.Models.Brand::get_Logo()
+DA:7,0
+FN:7,System.String api.Models.Brand::get_IsAvailable()
+FNDA:0,System.String api.Models.Brand::get_IsAvailable()
+DA:8,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Entities/Customer.cs
+FN:4,System.Int32 api.Models.Customer::get_CustomerID()
+FNDA:0,System.Int32 api.Models.Customer::get_CustomerID()
+DA:5,0
+FN:5,System.String api.Models.Customer::get_Email()
+FNDA:0,System.String api.Models.Customer::get_Email()
+DA:6,0
+FN:6,System.String api.Models.Customer::get_Name()
+FNDA:0,System.String api.Models.Customer::get_Name()
+DA:7,0
+FN:7,System.String api.Models.Customer::get_Password()
+FNDA:0,System.String api.Models.Customer::get_Password()
+DA:8,0
+FN:8,System.Int32 api.Models.Customer::get_RegionID()
+FNDA:0,System.Int32 api.Models.Customer::get_RegionID()
+DA:9,0
+FN:9,System.Int32 api.Models.Customer::get_Nit()
+FNDA:0,System.Int32 api.Models.Customer::get_Nit()
+DA:10,0
+FN:10,System.String api.Models.Customer::get_IsAvailable()
+FNDA:0,System.String api.Models.Customer::get_IsAvailable()
+DA:11,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Entities/Product.cs
+FN:4,System.Int32 api.Models.Product::get_ProductID()
+FNDA:0,System.Int32 api.Models.Product::get_ProductID()
+DA:5,0
+FN:5,System.String api.Models.Product::get_Name()
+FNDA:0,System.String api.Models.Product::get_Name()
+DA:6,0
+FN:6,System.Decimal api.Models.Product::get_Price()
+FNDA:0,System.Decimal api.Models.Product::get_Price()
+DA:7,0
+FN:7,System.Int32 api.Models.Product::get_Quantity()
+FNDA:0,System.Int32 api.Models.Product::get_Quantity()
+DA:8,0
+FN:8,System.Int32 api.Models.Product::get_Discount()
+FNDA:0,System.Int32 api.Models.Product::get_Discount()
+DA:9,0
+FN:9,System.String api.Models.Product::get_AnimalCategory()
+FNDA:0,System.String api.Models.Product::get_AnimalCategory()
+DA:10,0
+FN:10,System.String api.Models.Product::get_Image()
+FNDA:0,System.String api.Models.Product::get_Image()
+DA:11,0
+FN:11,System.String api.Models.Product::get_Description()
+FNDA:0,System.String api.Models.Product::get_Description()
+DA:12,0
+FN:12,System.String api.Models.Product::get_ProductType()
+FNDA:0,System.String api.Models.Product::get_ProductType()
+DA:13,0
+FN:13,System.Int32 api.Models.Product::get_BrandID()
+FNDA:0,System.Int32 api.Models.Product::get_BrandID()
+DA:14,0
+FN:14,System.Int32 api.Models.Product::get_ProviderID()
+FNDA:0,System.Int32 api.Models.Product::get_ProviderID()
+DA:15,0
+FN:15,System.String api.Models.Product::get_IsAvailable()
+FNDA:0,System.String api.Models.Product::get_IsAvailable()
+DA:16,0
+FN:16,System.String api.Models.Product::get_HasTax()
+FNDA:0,System.String api.Models.Product::get_HasTax()
+DA:17,0
+LF:13
+LH:0
+BRF:0
+BRH:0
+FNF:13
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Entities/Provider.cs
+FN:4,System.Int32 api.Models.Provider::get_ProviderID()
+FNDA:0,System.Int32 api.Models.Provider::get_ProviderID()
+DA:5,0
+FN:5,System.String api.Models.Provider::get_Name()
+FNDA:0,System.String api.Models.Provider::get_Name()
+DA:6,0
+FN:6,System.String api.Models.Provider::get_Nationality()
+FNDA:0,System.String api.Models.Provider::get_Nationality()
+DA:7,0
+FN:7,System.String api.Models.Provider::get_IsAvailable()
+FNDA:0,System.String api.Models.Provider::get_IsAvailable()
+DA:8,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Management/Region.cs
+FN:4,System.Int32 api.Models.Region::get_RegionID()
+FNDA:0,System.Int32 api.Models.Region::get_RegionID()
+DA:5,0
+FN:5,System.String api.Models.Region::get_Name()
+FNDA:0,System.String api.Models.Region::get_Name()
+DA:6,0
+FN:6,System.Decimal api.Models.Region::get_MunicipalTax()
+FNDA:0,System.Decimal api.Models.Region::get_MunicipalTax()
+DA:7,0
+FN:7,System.Decimal api.Models.Region::get_StatalTax()
+FNDA:0,System.Decimal api.Models.Region::get_StatalTax()
+DA:8,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Management/Review.cs
+FN:4,System.Int32 api.Models.Review::get_ReviewID()
+FNDA:0,System.Int32 api.Models.Review::get_ReviewID()
+DA:5,0
+FN:5,System.Int32 api.Models.Review::get_CustomerID()
+FNDA:0,System.Int32 api.Models.Review::get_CustomerID()
+DA:6,0
+FN:6,System.Int32 api.Models.Review::get_ProductID()
+FNDA:0,System.Int32 api.Models.Review::get_ProductID()
+DA:7,0
+FN:7,System.String api.Models.Review::get_ReviewMessage()
+FNDA:0,System.String api.Models.Review::get_ReviewMessage()
+DA:8,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Transactions/Purchase.cs
+FN:4,System.Int32 api.Models.Purchase::get_PurchaseID()
+FNDA:0,System.Int32 api.Models.Purchase::get_PurchaseID()
+DA:5,0
+FN:5,System.Decimal api.Models.Purchase::get_TotalPrice()
+FNDA:0,System.Decimal api.Models.Purchase::get_TotalPrice()
+DA:6,0
+FN:6,System.String api.Models.Purchase::get_ReportDate()
+FNDA:0,System.String api.Models.Purchase::get_ReportDate()
+DA:7,0
+FN:7,System.Decimal api.Models.Purchase::get_ObtainedTaxes()
+FNDA:0,System.Decimal api.Models.Purchase::get_ObtainedTaxes()
+DA:8,0
+FN:8,System.Decimal api.Models.Purchase::get_ApplicationTax()
+FNDA:0,System.Decimal api.Models.Purchase::get_ApplicationTax()
+DA:9,0
+FN:9,System.Decimal api.Models.Purchase::get_DeliveryTime()
+FNDA:0,System.Decimal api.Models.Purchase::get_DeliveryTime()
+DA:10,0
+FN:10,System.Int32 api.Models.Purchase::get_LocalQuantity()
+FNDA:0,System.Int32 api.Models.Purchase::get_LocalQuantity()
+DA:11,0
+FN:11,System.Int32 api.Models.Purchase::get_ProductID()
+FNDA:0,System.Int32 api.Models.Purchase::get_ProductID()
+DA:12,0
+FN:12,System.Int32 api.Models.Purchase::get_UserID()
+FNDA:0,System.Int32 api.Models.Purchase::get_UserID()
+DA:13,0
+FN:13,System.String api.Models.Purchase::get_IsAvailable()
+FNDA:0,System.String api.Models.Purchase::get_IsAvailable()
+DA:14,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:10
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Validations/decimalAccuracyValidation/DecimalPrecision.cs
+FN:14,System.ComponentModel.DataAnnotations.ValidationResult api.Models.DecimalPrecision::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+FNDA:0,System.ComponentModel.DataAnnotations.ValidationResult api.Models.DecimalPrecision::IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:25,0
+DA:26,0
+BRDA:16,2,0,0
+BRDA:16,10,0,0
+BRDA:16,10,1,0
+BRDA:16,2,1,0
+BRDA:16,28,0,0
+BRDA:19,58,0,0
+BRDA:19,58,1,0
+BRDA:16,28,1,0
+FN:8,System.Void api.Models.DecimalPrecision::.ctor(System.Int32)
+FNDA:0,System.Void api.Models.DecimalPrecision::.ctor(System.Int32)
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+LF:14
+LH:0
+BRF:8
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Transactions/Sale.cs
+FN:4,System.Int32 api.Models.Transactions.Sale::get_SaleID()
+FNDA:0,System.Int32 api.Models.Transactions.Sale::get_SaleID()
+DA:5,0
+FN:5,System.String api.Models.Transactions.Sale::get_ZipCode()
+FNDA:0,System.String api.Models.Transactions.Sale::get_ZipCode()
+DA:6,0
+FN:6,System.Int32 api.Models.Transactions.Sale::get_Cvv()
+FNDA:0,System.Int32 api.Models.Transactions.Sale::get_Cvv()
+DA:7,0
+FN:7,System.String api.Models.Transactions.Sale::get_CardNumber()
+FNDA:0,System.String api.Models.Transactions.Sale::get_CardNumber()
+DA:8,0
+FN:8,System.String api.Models.Transactions.Sale::get_Date()
+FNDA:0,System.String api.Models.Transactions.Sale::get_Date()
+DA:9,0
+FN:9,System.Decimal api.Models.Transactions.Sale::get_FinalPrice()
+FNDA:0,System.Decimal api.Models.Transactions.Sale::get_FinalPrice()
+DA:10,0
+FN:10,System.Int32 api.Models.Transactions.Sale::get_UserID()
+FNDA:0,System.Int32 api.Models.Transactions.Sale::get_UserID()
+DA:11,0
+FN:11,System.String api.Models.Transactions.Sale::get_IsAvailable()
+FNDA:0,System.String api.Models.Transactions.Sale::get_IsAvailable()
+DA:12,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Models/Entities/Administrator.cs
+FN:4,System.Int32 api.Models.Entities.Administrator::get_AdministratorID()
+FNDA:0,System.Int32 api.Models.Entities.Administrator::get_AdministratorID()
+DA:5,0
+FN:5,System.String api.Models.Entities.Administrator::get_Name()
+FNDA:0,System.String api.Models.Entities.Administrator::get_Name()
+DA:6,0
+FN:6,System.String api.Models.Entities.Administrator::get_Email()
+FNDA:0,System.String api.Models.Entities.Administrator::get_Email()
+DA:7,0
+FN:7,System.String api.Models.Entities.Administrator::get_AdminType()
+FNDA:0,System.String api.Models.Entities.Administrator::get_AdminType()
+DA:8,0
+FN:8,System.String api.Models.Entities.Administrator::get_Password()
+FNDA:0,System.String api.Models.Entities.Administrator::get_Password()
+DA:9,0
+FN:9,System.String api.Models.Entities.Administrator::get_RegisterDate()
+FNDA:0,System.String api.Models.Entities.Administrator::get_RegisterDate()
+DA:10,0
+FN:10,System.Int32 api.Models.Entities.Administrator::get_Nit()
+FNDA:0,System.Int32 api.Models.Entities.Administrator::get_Nit()
+DA:11,0
+FN:11,System.Int32 api.Models.Entities.Administrator::get_PhoneNumber()
+FNDA:0,System.Int32 api.Models.Entities.Administrator::get_PhoneNumber()
+DA:12,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Migrations/20231201134807_firstmigration.cs
+FN:10,System.Void api.Migrations.Firstmigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void api.Migrations.Firstmigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+FN:175,System.Void api.Migrations.Firstmigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void api.Migrations.Firstmigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:176,0
+DA:177,0
+DA:178,0
+DA:180,0
+DA:181,0
+DA:183,0
+DA:184,0
+DA:186,0
+DA:187,0
+DA:189,0
+DA:190,0
+DA:192,0
+DA:193,0
+DA:195,0
+DA:196,0
+DA:198,0
+DA:199,0
+DA:201,0
+DA:202,0
+DA:203,0
+LF:174
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Migrations/20231201134807_firstmigration.Designer.cs
+FN:15,System.Void api.Migrations.Firstmigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void api.Migrations.Firstmigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:267,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:330,0
+LF:303
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Migrations/DataContextModelSnapshot.cs
+FN:13,System.Void api.Migrations.DataContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void api.Migrations.DataContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:14,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:328,0
+LF:303
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Entities/BrandDTO.cs
+FN:7,System.Int32 api.DTOs.BrandDTO::get_BrandID()
+FNDA:0,System.Int32 api.DTOs.BrandDTO::get_BrandID()
+DA:8,0
+FN:14,System.String api.DTOs.BrandDTO::get_Name()
+FNDA:0,System.String api.DTOs.BrandDTO::get_Name()
+DA:15,0
+FN:20,System.String api.DTOs.BrandDTO::get_Logo()
+FNDA:0,System.String api.DTOs.BrandDTO::get_Logo()
+DA:21,0
+FN:24,System.Boolean api.DTOs.BrandDTO::get_IsAvailable()
+FNDA:0,System.Boolean api.DTOs.BrandDTO::get_IsAvailable()
+DA:25,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Entities/CustomerDTO.cs
+FN:8,System.Int32 api.DTOs.CustomerDTO::get_CustomerID()
+FNDA:0,System.Int32 api.DTOs.CustomerDTO::get_CustomerID()
+DA:9,0
+FN:15,System.String api.DTOs.CustomerDTO::get_Email()
+FNDA:0,System.String api.DTOs.CustomerDTO::get_Email()
+DA:16,0
+FN:22,System.String api.DTOs.CustomerDTO::get_Name()
+FNDA:0,System.String api.DTOs.CustomerDTO::get_Name()
+DA:23,0
+FN:28,System.String api.DTOs.CustomerDTO::get_Password()
+FNDA:0,System.String api.DTOs.CustomerDTO::get_Password()
+DA:29,0
+FN:33,System.Int32 api.DTOs.CustomerDTO::get_RegionID()
+FNDA:0,System.Int32 api.DTOs.CustomerDTO::get_RegionID()
+DA:34,0
+FN:39,System.Int32 api.DTOs.CustomerDTO::get_Nit()
+FNDA:0,System.Int32 api.DTOs.CustomerDTO::get_Nit()
+DA:40,0
+FN:43,System.Boolean api.DTOs.CustomerDTO::get_IsAvailable()
+FNDA:0,System.Boolean api.DTOs.CustomerDTO::get_IsAvailable()
+DA:44,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Entities/ProductDTO.cs
+FN:9,System.Int32 api.DTOs.ProductDTO::get_ProductID()
+FNDA:0,System.Int32 api.DTOs.ProductDTO::get_ProductID()
+DA:10,0
+FN:16,System.String api.DTOs.ProductDTO::get_Name()
+FNDA:0,System.String api.DTOs.ProductDTO::get_Name()
+DA:17,0
+FN:22,System.Decimal api.DTOs.ProductDTO::get_Price()
+FNDA:0,System.Decimal api.DTOs.ProductDTO::get_Price()
+DA:23,0
+FN:28,System.Int32 api.DTOs.ProductDTO::get_Quantity()
+FNDA:0,System.Int32 api.DTOs.ProductDTO::get_Quantity()
+DA:29,0
+FN:33,System.Int32 api.DTOs.ProductDTO::get_Discount()
+FNDA:0,System.Int32 api.DTOs.ProductDTO::get_Discount()
+DA:34,0
+FN:40,System.String api.DTOs.ProductDTO::get_AnimalCategory()
+FNDA:0,System.String api.DTOs.ProductDTO::get_AnimalCategory()
+DA:41,0
+FN:46,System.String api.DTOs.ProductDTO::get_Image()
+FNDA:0,System.String api.DTOs.ProductDTO::get_Image()
+DA:47,0
+FN:53,System.String api.DTOs.ProductDTO::get_Description()
+FNDA:0,System.String api.DTOs.ProductDTO::get_Description()
+DA:54,0
+FN:60,System.String api.DTOs.ProductDTO::get_ProductType()
+FNDA:0,System.String api.DTOs.ProductDTO::get_ProductType()
+DA:61,0
+FN:65,System.Int32 api.DTOs.ProductDTO::get_BrandID()
+FNDA:0,System.Int32 api.DTOs.ProductDTO::get_BrandID()
+DA:66,0
+FN:70,System.Int32 api.DTOs.ProductDTO::get_ProviderID()
+FNDA:0,System.Int32 api.DTOs.ProductDTO::get_ProviderID()
+DA:71,0
+FN:74,System.Boolean api.DTOs.ProductDTO::get_IsAvailable()
+FNDA:0,System.Boolean api.DTOs.ProductDTO::get_IsAvailable()
+DA:75,0
+FN:78,System.Boolean api.DTOs.ProductDTO::get_HasTax()
+FNDA:0,System.Boolean api.DTOs.ProductDTO::get_HasTax()
+DA:79,0
+LF:13
+LH:0
+BRF:0
+BRH:0
+FNF:13
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Entities/ProviderDTO.cs
+FN:7,System.Int32 api.DTOs.ProviderDTO::get_ProviderID()
+FNDA:0,System.Int32 api.DTOs.ProviderDTO::get_ProviderID()
+DA:8,0
+FN:14,System.String api.DTOs.ProviderDTO::get_Name()
+FNDA:0,System.String api.DTOs.ProviderDTO::get_Name()
+DA:15,0
+FN:21,System.String api.DTOs.ProviderDTO::get_Nationality()
+FNDA:0,System.String api.DTOs.ProviderDTO::get_Nationality()
+DA:22,0
+FN:25,System.Boolean api.DTOs.ProviderDTO::get_IsAvailable()
+FNDA:0,System.Boolean api.DTOs.ProviderDTO::get_IsAvailable()
+DA:26,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Management/RegionDTO.cs
+FN:8,System.Int32 api.DTOs.RegionDTO::get_RegionID()
+FNDA:0,System.Int32 api.DTOs.RegionDTO::get_RegionID()
+DA:9,0
+FN:15,System.String api.DTOs.RegionDTO::get_Name()
+FNDA:0,System.String api.DTOs.RegionDTO::get_Name()
+DA:16,0
+FN:21,System.Decimal api.DTOs.RegionDTO::get_MunicipalTax()
+FNDA:0,System.Decimal api.DTOs.RegionDTO::get_MunicipalTax()
+DA:22,0
+FN:27,System.Decimal api.DTOs.RegionDTO::get_StatalTax()
+FNDA:0,System.Decimal api.DTOs.RegionDTO::get_StatalTax()
+DA:28,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Management/ReviewDTO.cs
+FN:7,System.Int32 api.DTOs.ReviewDTO::get_ReviewID()
+FNDA:0,System.Int32 api.DTOs.ReviewDTO::get_ReviewID()
+DA:8,0
+FN:12,System.Int32 api.DTOs.ReviewDTO::get_CustomerID()
+FNDA:0,System.Int32 api.DTOs.ReviewDTO::get_CustomerID()
+DA:13,0
+FN:17,System.Int32 api.DTOs.ReviewDTO::get_ProductID()
+FNDA:0,System.Int32 api.DTOs.ReviewDTO::get_ProductID()
+DA:18,0
+FN:24,System.String api.DTOs.ReviewDTO::get_ReviewMessage()
+FNDA:0,System.String api.DTOs.ReviewDTO::get_ReviewMessage()
+DA:25,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Transactions/PurchaseDTO.cs
+FN:8,System.Int32 api.DTOs.PurchaseDTO::get_PurchaseID()
+FNDA:0,System.Int32 api.DTOs.PurchaseDTO::get_PurchaseID()
+DA:9,0
+FN:14,System.Decimal api.DTOs.PurchaseDTO::get_TotalPrice()
+FNDA:0,System.Decimal api.DTOs.PurchaseDTO::get_TotalPrice()
+DA:15,0
+FN:20,System.Decimal api.DTOs.PurchaseDTO::get_ObtainedTaxes()
+FNDA:0,System.Decimal api.DTOs.PurchaseDTO::get_ObtainedTaxes()
+DA:21,0
+FN:26,System.Decimal api.DTOs.PurchaseDTO::get_DeliveryTime()
+FNDA:0,System.Decimal api.DTOs.PurchaseDTO::get_DeliveryTime()
+DA:27,0
+FN:31,System.Int32 api.DTOs.PurchaseDTO::get_LocalQuantity()
+FNDA:0,System.Int32 api.DTOs.PurchaseDTO::get_LocalQuantity()
+DA:32,0
+FN:36,System.Int32 api.DTOs.PurchaseDTO::get_ProductID()
+FNDA:0,System.Int32 api.DTOs.PurchaseDTO::get_ProductID()
+DA:37,0
+FN:41,System.Int32 api.DTOs.PurchaseDTO::get_UserID()
+FNDA:0,System.Int32 api.DTOs.PurchaseDTO::get_UserID()
+DA:42,0
+FN:45,System.Boolean api.DTOs.PurchaseDTO::get_IsAvailable()
+FNDA:0,System.Boolean api.DTOs.PurchaseDTO::get_IsAvailable()
+DA:46,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Entities/AdministratorDTO.cs
+FN:4,System.String api.DTOs.Entities.AdministratorDTO::get_Email()
+FNDA:0,System.String api.DTOs.Entities.AdministratorDTO::get_Email()
+DA:5,0
+FN:5,System.String api.DTOs.Entities.AdministratorDTO::get_Password()
+FNDA:0,System.String api.DTOs.Entities.AdministratorDTO::get_Password()
+DA:6,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/DTOs/Transactions/SaleDTO.cs
+FN:8,System.Int32 api.DTOs.Entities.SaleDTO::get_SaleID()
+FNDA:0,System.Int32 api.DTOs.Entities.SaleDTO::get_SaleID()
+DA:9,0
+FN:14,System.String api.DTOs.Entities.SaleDTO::get_ZipCode()
+FNDA:0,System.String api.DTOs.Entities.SaleDTO::get_ZipCode()
+DA:15,0
+FN:20,System.Int32 api.DTOs.Entities.SaleDTO::get_Cvv()
+FNDA:0,System.Int32 api.DTOs.Entities.SaleDTO::get_Cvv()
+DA:21,0
+FN:26,System.String api.DTOs.Entities.SaleDTO::get_CardNumber()
+FNDA:0,System.String api.DTOs.Entities.SaleDTO::get_CardNumber()
+DA:27,0
+FN:32,System.String api.DTOs.Entities.SaleDTO::get_Date()
+FNDA:0,System.String api.DTOs.Entities.SaleDTO::get_Date()
+DA:33,0
+FN:38,System.Decimal api.DTOs.Entities.SaleDTO::get_FinalPrice()
+FNDA:0,System.Decimal api.DTOs.Entities.SaleDTO::get_FinalPrice()
+DA:39,0
+FN:43,System.Int32 api.DTOs.Entities.SaleDTO::get_UserID()
+FNDA:0,System.Int32 api.DTOs.Entities.SaleDTO::get_UserID()
+DA:44,0
+FN:47,System.String api.DTOs.Entities.SaleDTO::get_IsAvailable()
+FNDA:0,System.String api.DTOs.Entities.SaleDTO::get_IsAvailable()
+DA:48,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Data/DataContext.cs
+FN:14,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Product> api.Data.DataContext::get_Products()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Product> api.Data.DataContext::get_Products()
+DA:15,0
+FN:15,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Brand> api.Data.DataContext::get_Brands()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Brand> api.Data.DataContext::get_Brands()
+DA:16,0
+FN:16,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Provider> api.Data.DataContext::get_Providers()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Provider> api.Data.DataContext::get_Providers()
+DA:17,0
+FN:17,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Customer> api.Data.DataContext::get_Customers()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Customer> api.Data.DataContext::get_Customers()
+DA:18,0
+FN:18,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Region> api.Data.DataContext::get_Regions()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Region> api.Data.DataContext::get_Regions()
+DA:19,0
+FN:19,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Purchase> api.Data.DataContext::get_Purchases()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Purchase> api.Data.DataContext::get_Purchases()
+DA:20,0
+FN:20,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Review> api.Data.DataContext::get_Reviews()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Review> api.Data.DataContext::get_Reviews()
+DA:21,0
+FN:21,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Transactions.Sale> api.Data.DataContext::get_Sales()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Transactions.Sale> api.Data.DataContext::get_Sales()
+DA:22,0
+FN:22,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Entities.Administrator> api.Data.DataContext::get_Administrators()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<api.Models.Entities.Administrator> api.Data.DataContext::get_Administrators()
+DA:23,0
+FN:10,System.Void api.Data.DataContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<api.Data.DataContext>)
+FNDA:0,System.Void api.Data.DataContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<api.Data.DataContext>)
+DA:11,0
+DA:12,0
+DA:14,0
+LF:12
+LH:0
+BRF:0
+BRH:0
+FNF:10
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Entities/BrandController.cs
+FN:15,System.Void api.Controllers.BrandController::.ctor(api.Services.BrandService)
+FNDA:0,System.Void api.Controllers.BrandController::.ctor(api.Services.BrandService)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:47,System.Void api.Controllers.BrandController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.BrandController/<Create>d__4::MoveNext()
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:54,0
+DA:55,0
+BRDA:50,176,0,0
+BRDA:50,176,1,0
+FN:22,System.Void api.Controllers.BrandController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.BrandController/<Get>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:29,System.Void api.Controllers.BrandController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.BrandController/<GetById>d__3::MoveNext()
+DA:30,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+BRDA:33,167,0,0
+BRDA:33,167,1,0
+BRDA:38,202,0,0
+BRDA:38,202,1,0
+FN:59,System.Void api.Controllers.BrandController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.BrandController/<Update>d__5::MoveNext()
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:66,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:74,0
+DA:75,0
+DA:77,0
+BRDA:61,40,0,0
+BRDA:61,40,1,0
+BRDA:68,210,0,0
+BRDA:68,210,1,0
+LF:35
+LH:0
+BRF:10
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Entities/CustomerController.cs
+FN:15,System.Void api.Controllers.CustomerController::.ctor(api.Services.CustomerService)
+FNDA:0,System.Void api.Controllers.CustomerController::.ctor(api.Services.CustomerService)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:45,System.Void api.Controllers.CustomerController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.CustomerController/<Create>d__4::MoveNext()
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:52,0
+DA:53,0
+DA:56,0
+DA:57,0
+BRDA:48,176,0,0
+BRDA:48,176,1,0
+BRDA:52,217,0,0
+BRDA:52,217,1,0
+FN:22,System.Void api.Controllers.CustomerController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.CustomerController/<Get>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:28,System.Void api.Controllers.CustomerController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.CustomerController/<GetById>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+BRDA:32,167,0,0
+BRDA:32,167,1,0
+BRDA:37,202,0,0
+BRDA:37,202,1,0
+FN:60,System.Void api.Controllers.CustomerController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.CustomerController/<Update>d__5::MoveNext()
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:67,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:75,0
+DA:76,0
+DA:78,0
+BRDA:62,40,0,0
+BRDA:62,40,1,0
+BRDA:69,210,0,0
+BRDA:69,210,1,0
+LF:37
+LH:0
+BRF:12
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Entities/LoginController.cs
+FN:38,System.String api.Controllers.LoginController::GenerateToken(api.Models.Entities.Administrator)
+FNDA:0,System.String api.Controllers.LoginController::GenerateToken(api.Models.Entities.Administrator)
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:54,0
+DA:55,0
+DA:56,0
+FN:18,System.Void api.Controllers.LoginController::.ctor(api.Services.Entities.LoginService,Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:0,System.Void api.Controllers.LoginController::.ctor(api.Services.Entities.LoginService,Microsoft.Extensions.Configuration.IConfiguration)
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+FN:26,System.Void api.Controllers.LoginController/<Login>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.LoginController/<Login>d__3::MoveNext()
+DA:27,0
+DA:28,0
+DA:30,0
+DA:31,0
+DA:34,0
+DA:35,0
+DA:36,0
+BRDA:30,164,0,0
+BRDA:30,164,1,0
+LF:27
+LH:0
+BRF:2
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Entities/ProductController.cs
+FN:15,System.Void api.Controllers.ProductsController::.ctor(api.Services.ProductService)
+FNDA:0,System.Void api.Controllers.ProductsController::.ctor(api.Services.ProductService)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:41,System.Void api.Controllers.ProductsController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.ProductsController/<Create>d__4::MoveNext()
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:48,0
+DA:49,0
+BRDA:44,176,0,0
+BRDA:44,176,1,0
+FN:22,System.Void api.Controllers.ProductsController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.ProductsController/<Get>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:28,System.Void api.Controllers.ProductsController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.ProductsController/<GetById>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+BRDA:32,164,0,0
+BRDA:32,164,1,0
+FN:53,System.Void api.Controllers.ProductsController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.ProductsController/<Update>d__5::MoveNext()
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:60,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:68,0
+DA:69,0
+DA:71,0
+BRDA:55,40,0,0
+BRDA:55,40,1,0
+BRDA:62,210,0,0
+BRDA:62,210,1,0
+LF:32
+LH:0
+BRF:8
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Entities/ProviderController.cs
+FN:15,System.Void api.Controllers.ProviderController::.ctor(api.Services.ProviderService)
+FNDA:0,System.Void api.Controllers.ProviderController::.ctor(api.Services.ProviderService)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:46,System.Void api.Controllers.ProviderController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.ProviderController/<Create>d__4::MoveNext()
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:53,0
+DA:54,0
+BRDA:49,176,0,0
+BRDA:49,176,1,0
+FN:22,System.Void api.Controllers.ProviderController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.ProviderController/<Get>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:28,System.Void api.Controllers.ProviderController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.ProviderController/<GetById>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+BRDA:32,167,0,0
+BRDA:32,167,1,0
+BRDA:37,202,0,0
+BRDA:37,202,1,0
+FN:58,System.Void api.Controllers.ProviderController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.ProviderController/<Update>d__5::MoveNext()
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:65,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:73,0
+DA:74,0
+DA:76,0
+BRDA:60,40,0,0
+BRDA:60,40,1,0
+BRDA:67,210,0,0
+BRDA:67,210,1,0
+LF:35
+LH:0
+BRF:10
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Management/RegionController.cs
+FN:15,System.Void api.Controllers.RegionController::.ctor(api.Services.RegionService)
+FNDA:0,System.Void api.Controllers.RegionController::.ctor(api.Services.RegionService)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:46,System.Void api.Controllers.RegionController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.RegionController/<Create>d__4::MoveNext()
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+FN:22,System.Void api.Controllers.RegionController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.RegionController/<Get>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+FN:28,System.Void api.Controllers.RegionController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.RegionController/<GetById>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+BRDA:32,167,0,0
+BRDA:32,167,1,0
+BRDA:37,202,0,0
+BRDA:37,202,1,0
+FN:55,System.Void api.Controllers.RegionController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.RegionController/<Update>d__5::MoveNext()
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:62,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:70,0
+DA:71,0
+DA:73,0
+BRDA:57,40,0,0
+BRDA:57,40,1,0
+BRDA:64,210,0,0
+BRDA:64,210,1,0
+LF:33
+LH:0
+BRF:8
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Management/ReviewController.cs
+FN:14,System.Void api.Controllers.ReviewController::.ctor(api.Services.ReviewService)
+FNDA:0,System.Void api.Controllers.ReviewController::.ctor(api.Services.ReviewService)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+FN:44,System.Void api.Controllers.ReviewController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.ReviewController/<Create>d__4::MoveNext()
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+FN:73,System.Void api.Controllers.ReviewController/<Delete>d__6::MoveNext()
+FNDA:0,System.Void api.Controllers.ReviewController/<Delete>d__6::MoveNext()
+DA:74,0
+DA:75,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:84,0
+BRDA:77,175,0,0
+BRDA:77,175,1,0
+FN:21,System.Void api.Controllers.ReviewController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.ReviewController/<Get>d__2::MoveNext()
+DA:22,0
+DA:23,0
+DA:24,0
+FN:27,System.Void api.Controllers.ReviewController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.ReviewController/<GetById>d__3::MoveNext()
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:41,0
+BRDA:31,167,0,0
+BRDA:31,167,1,0
+BRDA:36,202,0,0
+BRDA:36,202,1,0
+FN:52,System.Void api.Controllers.ReviewController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.ReviewController/<Update>d__5::MoveNext()
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:59,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:67,0
+DA:68,0
+DA:70,0
+BRDA:54,40,0,0
+BRDA:54,40,1,0
+BRDA:61,210,0,0
+BRDA:61,210,1,0
+LF:42
+LH:0
+BRF:10
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Transactions/PurchaseController.cs
+FN:14,System.Void api.Controllers.PurchaseController::.ctor(api.Services.PurchaseService)
+FNDA:0,System.Void api.Controllers.PurchaseController::.ctor(api.Services.PurchaseService)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+FN:44,System.Void api.Controllers.PurchaseController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.PurchaseController/<Create>d__4::MoveNext()
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+FN:21,System.Void api.Controllers.PurchaseController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.PurchaseController/<Get>d__2::MoveNext()
+DA:22,0
+DA:23,0
+DA:24,0
+FN:27,System.Void api.Controllers.PurchaseController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.PurchaseController/<GetById>d__3::MoveNext()
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:41,0
+BRDA:31,167,0,0
+BRDA:31,167,1,0
+BRDA:36,202,0,0
+BRDA:36,202,1,0
+FN:52,System.Void api.Controllers.PurchaseController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.PurchaseController/<Update>d__5::MoveNext()
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:59,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:67,0
+DA:68,0
+DA:70,0
+BRDA:54,40,0,0
+BRDA:54,40,1,0
+BRDA:61,210,0,0
+BRDA:61,210,1,0
+LF:33
+LH:0
+BRF:8
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/Transactions/SaleController.cs
+FN:14,System.Void api.Controllers.SalesController::.ctor(api.Services.SaleService)
+FNDA:0,System.Void api.Controllers.SalesController::.ctor(api.Services.SaleService)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+FN:44,System.Void api.Controllers.SalesController/<Create>d__4::MoveNext()
+FNDA:0,System.Void api.Controllers.SalesController/<Create>d__4::MoveNext()
+DA:45,0
+DA:46,0
+DA:48,0
+DA:49,0
+FN:21,System.Void api.Controllers.SalesController/<Get>d__2::MoveNext()
+FNDA:0,System.Void api.Controllers.SalesController/<Get>d__2::MoveNext()
+DA:22,0
+DA:23,0
+DA:24,0
+FN:27,System.Void api.Controllers.SalesController/<GetById>d__3::MoveNext()
+FNDA:0,System.Void api.Controllers.SalesController/<GetById>d__3::MoveNext()
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:41,0
+BRDA:31,167,0,0
+BRDA:31,167,1,0
+BRDA:36,202,0,0
+BRDA:36,202,1,0
+FN:52,System.Void api.Controllers.SalesController/<Update>d__5::MoveNext()
+FNDA:0,System.Void api.Controllers.SalesController/<Update>d__5::MoveNext()
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:59,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:67,0
+DA:68,0
+DA:70,0
+BRDA:54,40,0,0
+BRDA:54,40,1,0
+BRDA:61,210,0,0
+BRDA:61,210,1,0
+LF:33
+LH:0
+BRF:8
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/fundacion/ProyectoSoftware4/Oficial-Backend5/pet-paradise-api/api/Controllers/WeatherForecastController.cs
+FN:22,System.Collections.Generic.IEnumerable`1<api.WeatherForecast> api.Controllers.WeatherForecastController::Get()
+FNDA:0,System.Collections.Generic.IEnumerable`1<api.WeatherForecast> api.Controllers.WeatherForecastController::Get()
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+FN:15,System.Void api.Controllers.WeatherForecastController::.ctor(Microsoft.Extensions.Logging.ILogger`1<api.Controllers.WeatherForecastController>)
+FNDA:0,System.Void api.Controllers.WeatherForecastController::.ctor(Microsoft.Extensions.Logging.ILogger`1<api.Controllers.WeatherForecastController>)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:8,System.Void api.Controllers.WeatherForecastController::.cctor()
+FNDA:0,System.Void api.Controllers.WeatherForecastController::.cctor()
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+LF:17
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record

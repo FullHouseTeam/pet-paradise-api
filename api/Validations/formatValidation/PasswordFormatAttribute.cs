@@ -13,7 +13,7 @@ public class PasswordFormatAttribute : ValidationAttribute
     {
         if (value != null)
         {
-            string input = value.ToString();
+            string input = value.ToString()!;
             var regex = new Regex(@"^[A-Z]\d[a-z]{6}$");
 
             if (!regex.IsMatch(input))
@@ -22,6 +22,6 @@ public class PasswordFormatAttribute : ValidationAttribute
             }
         }
 
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }

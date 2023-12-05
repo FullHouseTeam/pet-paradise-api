@@ -15,6 +15,6 @@ public class StringValue : ValidationAttribute
             return new ValidationResult(ErrorMessage);
         }
 
-        return ValidationResult.Success;
+        return ValidationResult.Success!;
     }
 }
