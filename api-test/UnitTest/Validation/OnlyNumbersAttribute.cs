@@ -1,15 +1,13 @@
 using System.ComponentModel.DataAnnotations;
-using Xunit;
 
-public class NoSpecialCharactersAttributeTests
+public class OnlyNumbersAttributeTests
 {
     [Theory]
-    [InlineData("ValidInput123")]
-    [InlineData("NoSpecialChars")]
-    [InlineData("123 456")]
-    public void NoSpecialCharacters_WhenInputIsValid_ShouldReturnSuccess(string value)
+    [InlineData("12345")]
+    [InlineData("987654")]
+    public void OnlyNumbers_WhenInputContainsOnlyNumbers_ShouldReturnSuccess(string value)
     {
-        var attribute = new NoSpecialCharactersAttribute("test");
+        var attribute = new OnlyNumbersAttribute();
         var validationContext = new ValidationContext(new object());
 
         var result = attribute.GetValidationResult(value, validationContext);
@@ -18,12 +16,12 @@ public class NoSpecialCharactersAttributeTests
     }
 
     [Theory]
-    [InlineData("Invalid!@#")]
-    [InlineData("Special^Chars")]
-    [InlineData("1$2%3")]
-    public void NoSpecialCharacters_WhenInputContainsSpecialCharacters_ShouldReturnError(string value)
+    [InlineData("abc")]
+    [InlineData("12.34")]
+    [InlineData("1a2b3c")]
+    public void OnlyNumbers_WhenInputContainsNonNumbers_ShouldReturnError(string value)
     {
-        var attribute = new NoSpecialCharactersAttribute("test");
+        var attribute = new OnlyNumbersAttribute();
         var validationContext = new ValidationContext(new object());
 
         var result = attribute.GetValidationResult(value, validationContext);
@@ -32,9 +30,9 @@ public class NoSpecialCharactersAttributeTests
     }
 
     [Fact]
-    public void NoSpecialCharacters_WhenValueIsNull_ShouldReturnSuccess()
+    public void OnlyNumbers_WhenValueIsNull_ShouldReturnSuccess()
     {
-        var attribute = new NoSpecialCharactersAttribute("test");
+        var attribute = new OnlyNumbersAttribute();
         var validationContext = new ValidationContext(new object());
 
         var result = attribute.GetValidationResult(null, validationContext);

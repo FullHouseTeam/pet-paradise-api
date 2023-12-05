@@ -1,7 +1,5 @@
-using api;
 using api.Utilities;
 using Microsoft.AspNetCore.Mvc;
-using Xunit;
 
 namespace UnitTests
 {
